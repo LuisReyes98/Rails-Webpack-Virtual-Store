@@ -1,24 +1,12 @@
-# README
+# Tienda Virtual
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Pagina para el control de compra, venta e inventario de una tienda
 
-Things you may want to cover:
+Base de datos:
+  -PostgreSQL
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+La pagina permitira a:
+  - Vendedores registrar ventas
+  - Usuarios Registrados , Hacer ordenes de compra que retiran en la tienda
+  - Usuarios no regitrados , ver productos y cantidad disponible
+  - Admin generar reportes de ventas en periodo de tiempo seleccionado
