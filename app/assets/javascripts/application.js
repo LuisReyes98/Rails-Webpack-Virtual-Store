@@ -19,7 +19,6 @@
 //= require popper
 
 //= require bootstrap-sprockets
-//= require vue
 
 // Ultimo siempre
 //= require_tree .
