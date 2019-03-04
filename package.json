@@ -12,6 +12,7 @@
   "devDependencies": {
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
+    "vue-template-compiler-loader": "^1.0.4",
     "webpack-dev-server": "2.11.2"
   }
 }

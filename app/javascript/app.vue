@@ -1,14 +1,10 @@
-<template >
-  <div id="app">
-    <p class="btn-primary" >{{ message }}</p>
-  </div>
-</template>
 
-// #app
-//   p.btn-primary
-//     | {{ message }}
 <script>
+import template from './hello.html.slim'
+
 export default {
+  mixins: [template],
+
   props: ["message"],
 }
 </script>
