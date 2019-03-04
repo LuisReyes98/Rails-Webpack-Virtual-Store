@@ -1,0 +1,17 @@
+h1
+  | Hola mundo 
+
+- 0.upto(9).each do |i|
+  app :message="#{i.to_json}"
+
+p
+  | Magna adipisicing Lorem ad Lorem sunt dolore quis proident velit.
+
+app inline-template="" :message="#{"I AM HUGE".to_json}"
+  / = form_with /aqui se puede poner eso para combinar vistas de rails con vue
+  h1 
+    | {{message}}
+
+
+== content_for :scripts do
+  javascript:

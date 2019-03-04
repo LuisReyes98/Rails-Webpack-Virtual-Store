@@ -66,6 +66,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #Weppack
 gem 'webpacker'
 
+gem 'foreman'
+
 #Slim 
 gem 'slim-rails' #for slim rails commands
 gem 'slim'  #for the processing of slim templates

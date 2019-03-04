@@ -2,9 +2,16 @@
   "name": "virtual_store",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "3.5"
+    "@rails/webpacker": "3.5",
+    "slim-lang-loader": "0.0.7",
+    "vue": "^2.6.8",
+    "vue-loader": "14.2.2",
+    "vue-template-compiler": "^2.6.8",
+    "vue-turbolinks": "^2.0.4"
   },
   "devDependencies": {
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
     "webpack-dev-server": "2.11.2"
   }
 }

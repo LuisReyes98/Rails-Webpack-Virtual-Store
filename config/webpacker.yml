@@ -14,6 +14,7 @@ default: &default
   cache_manifest: false
 
   extensions:
+    - .vue
     - .js
     - .sass
     - .scss
@@ -26,6 +27,7 @@ default: &default
     - .gif
     - .jpeg
     - .jpg
+    - .slim
 
 development:
   <<: *default
