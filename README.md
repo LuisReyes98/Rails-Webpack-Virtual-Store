@@ -2,6 +2,8 @@
 
 Pagina para el control de compra, venta e inventario de una tienda
 
+nombre de la gema en la pc de rogelio ```store```
+
 Base de datos:
   -PostgreSQL
 
