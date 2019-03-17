@@ -11,6 +11,7 @@
 import Rails from 'rails-ujs';
 import Turbolinks from 'turbolinks';
 import * as ActiveStorage from 'activestorage';
+
 Rails.start();
 Turbolinks.start();
 ActiveStorage.start();
@@ -20,10 +21,13 @@ import Vue from 'vue/dist/vue.esm'
 import App from '../src/app.vue'
 import Hi from '../src/hello.vue'
 
-import '../application/stylesheets/index.js.erb';
-import '../application/images/index.js.erb';
-import '../application/fonts/index.js.erb';
-import '../application/javascripts/index.js.erb';
+
+import '../assets/stylesheets/index.js.erb';
+import '../assets/images/index.js.erb';
+import '../assets/fonts/index.js.erb';
+import '../assets/javascripts/index.js.erb';
+
+import 'bootstrap';
 
 Vue.use(TurbolinksAdapter)
 

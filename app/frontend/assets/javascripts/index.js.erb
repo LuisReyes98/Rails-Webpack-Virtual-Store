@@ -1,0 +1,4 @@
+<% files_glob = Rails.application.root.join('app', 'frontend', 'assets', 'javascripts', '**', '*.js') %>
+<% Dir.glob(files_glob).each do |file| %>
+  import '<%= file %>';
+<% end %>
