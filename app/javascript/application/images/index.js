@@ -1,1 +1,0 @@
-import 'application/images/image1.jpeg';

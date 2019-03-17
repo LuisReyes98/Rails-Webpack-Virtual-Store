@@ -4,7 +4,7 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 //
-// To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
+// To reference this file, add <%%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
 // console.log('Hello World from Webpacker')
@@ -20,10 +20,10 @@ import Vue from 'vue/dist/vue.esm'
 import App from '../src/app.vue'
 import Hi from '../src/hello.vue'
 
-import '../application/stylesheets/index.js';
-import '../application/images/index.js';
-import '../application/fonts/index.js';
-import '../application/javascripts/index.js';
+import '../application/stylesheets/index.js.erb';
+import '../application/images/index.js.erb';
+import '../application/fonts/index.js.erb';
+import '../application/javascripts/index.js.erb';
 
 Vue.use(TurbolinksAdapter)
 

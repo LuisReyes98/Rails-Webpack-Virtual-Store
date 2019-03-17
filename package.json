@@ -4,6 +4,7 @@
   "dependencies": {
     "@rails/webpacker": "3.5",
     "activestorage": "^5.2.2-1",
+    "rails-erb-loader": "^5.5.2",
     "rails-ujs": "^5.2.2-1",
     "slim-lang-loader": "0.0.7",
     "turbolinks": "^5.2.0",
