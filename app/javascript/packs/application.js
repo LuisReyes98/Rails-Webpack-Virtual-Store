@@ -8,7 +8,12 @@
 // layout file, like app/views/layouts/application.html.erb
 
 // console.log('Hello World from Webpacker')
-
+import Rails from 'rails-ujs';
+import Turbolinks from 'turbolinks';
+import * as ActiveStorage from 'activestorage';
+Rails.start();
+Turbolinks.start();
+ActiveStorage.start();
 
 import TurbolinksAdapter from 'vue-turbolinks'
 import Vue from 'vue/dist/vue.esm'
