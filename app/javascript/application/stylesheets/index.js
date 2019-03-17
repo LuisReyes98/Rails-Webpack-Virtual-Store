@@ -1,0 +1,1 @@
+import 'application/stylesheets/bootstrap.min.css';

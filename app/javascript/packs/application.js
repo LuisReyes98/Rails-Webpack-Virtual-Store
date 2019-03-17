@@ -9,13 +9,21 @@
 
 // console.log('Hello World from Webpacker')
 
+
 import TurbolinksAdapter from 'vue-turbolinks'
 import Vue from 'vue/dist/vue.esm'
-import App from '../app.vue'
+import App from '../src/app.vue'
+import Hi from '../src/hello.vue'
+
+import '../application/stylesheets/index.js';
+import '../application/images/index.js';
+import '../application/fonts/index.js';
+import '../application/javascripts/index.js';
 
 Vue.use(TurbolinksAdapter)
 
-Vue.component('app',App)
+Vue.component('app', App)
+Vue.component('hi',Hi)
 
 document.addEventListener('turbolinks:load', () => {
   const app = new Vue({

@@ -15,10 +15,5 @@
 //= require activestorage
 //= require turbolinks
 
-//= require jquery3
-//= require popper
-
-//= require bootstrap-sprockets
-
 // Ultimo siempre
 //= require_tree .

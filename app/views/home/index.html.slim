@@ -2,16 +2,20 @@ h1
   | Hola mundo 
 
 - 0.upto(4).each do |i|
-  app :message="#{i.to_json}"
+  hi :message="#{i.to_json}"
 
 p
   | Magna adipisicing Lorem ad Lorem sunt dolore quis proident velit.
 
-app inline-template="" :message="#{"I AM HUGE".to_json}"
+hi inline-template="" :message="#{"I AM HUGE".to_json}"
   / = form_with /aqui se puede poner eso para combinar vistas de rails con vue
   h1 
     | {{message}}
 
+hi :message="#{"Not here".to_json}"  :image="#{asset_pack_path("application/images/image1.jpeg").to_json}"
+
+/ = image_tag asset_pack_path("application/images/image1.jpeg")
+ 
 
 == content_for :scripts do
   javascript:
