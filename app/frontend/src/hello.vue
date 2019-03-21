@@ -1,6 +1,6 @@
 
 <script>
-import template from './hi.html.slim'
+import template from './hi.html.slim';
 
 export default {
   mixins: [template],

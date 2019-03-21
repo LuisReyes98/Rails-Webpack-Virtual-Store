@@ -16,11 +16,12 @@ Rails.start();
 Turbolinks.start();
 ActiveStorage.start();
 
-import TurbolinksAdapter from 'vue-turbolinks'
-import Vue from 'vue/dist/vue.esm'
-import App from '../src/app.vue'
-import Hi from '../src/hello.vue'
+import TurbolinksAdapter from 'vue-turbolinks';
+import Vue from 'vue/dist/vue.esm';
+import App from '../src/app.vue';
 
+import Hi from '../src/hello.vue';
+import NavBarStore from '../src/navbar.vue';
 
 import '../assets/stylesheets/index.js.erb';
 import '../assets/images/index.js.erb';
@@ -32,7 +33,8 @@ import 'bootstrap';
 Vue.use(TurbolinksAdapter)
 
 Vue.component('app', App)
-Vue.component('hi',Hi)
+Vue.component('hi', Hi)
+Vue.component('navbarstore', NavBarStore)
 
 document.addEventListener('turbolinks:load', () => {
   const app = new Vue({

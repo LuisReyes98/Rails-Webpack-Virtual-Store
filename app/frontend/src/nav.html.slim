@@ -1,0 +1,17 @@
+nav.navbar.navbar-expand-sm.navbar-dark.bg-danger
+  a.navbar-brand href="#"  Tu Tienda Online
+  button.navbar-toggler aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button" 
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item.active
+        a.nav-link href="/" 
+          | Inicio
+          span.sr-only (página actual)
+      li.nav-item
+        a.nav-link href="/users/sign_in"  Iniciar sesión
+      li.nav-item
+        a.nav-link href=""  Carrito
+    form.form-inline.my-2.my-lg-0 action="#" 
+      input.form-control aria-label="Search" placeholder="Buscar" type="search" /
+      button.btn.btn-light.my-2.my-sm-0 type="submit"  Buscar  

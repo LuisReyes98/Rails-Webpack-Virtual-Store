@@ -1,21 +1,84 @@
-h1
-  | Hola mundo 
-
-- 0.upto(4).each do |i|
-  hi :message="#{i.to_json}"
-
-p
-  | Magna adipisicing Lorem ad Lorem sunt dolore quis proident velit.
-
-hi inline-template="" :message="#{"I AM HUGE".to_json}"
-  / = form_with /aqui se puede poner eso para combinar vistas de rails con vue
-  h1 
-    | {{message}}
-
-hi :message="#{"Not here".to_json}"  :image="#{asset_pack_path("assets/images/image1.jpeg").to_json}"
-
-/ = image_tag asset_pack_path("application/images/image1.jpeg")
+.container-fluid
+  .row
+    .col-sm-4.bg-secondary
+      h3 Grupos:
+      ul
+        li
+          | Grupo 1:
+          ul
+            li
+              | Categoría 1:
+              ul
+                li Lorem
+                li Lorem
+                li Lorem
+      h3 Grupos:
+      ul
+        li
+          | Grupo 1:
+          ul
+            li
+              | Categoría 1:
+              ul
+                li Lorem
+                li Lorem
+                li Lorem
+    .col-sm-8
+      .container-fluid
+        .row
+          .col
+            .card-deck
+              .card.bg-info
+                img.card-img-top alt=("Foto del producto") src="https://http2.mlstatic.com/franelas-blancas-unicolor-para-estampar-D_NQ_NP_900550-MLV27190716342_042018-F.jpg" /
+                .card-body
+                  h6.card-title Lorem Ipsum
+                  p.card-text
+                    a href="#"  Ver más
+                  p.card-text
+                    a href="#"  Añadir a carrito
+              .card.bg-info
+                img.card-img-top alt=("Foto del producto") src="https://http2.mlstatic.com/franelas-blancas-unicolor-para-estampar-D_NQ_NP_900550-MLV27190716342_042018-F.jpg" /
+                .card-body
+                  h6.card-title Lorem Ipsum
+                  p.card-text
+                    a href="#"  Ver más
+                  p.card-text
+                    a href="#"  Añadir a carrito
+              .card.bg-info
+                img.card-img-top alt=("Foto del producto") src="https://http2.mlstatic.com/franelas-blancas-unicolor-para-estampar-D_NQ_NP_900550-MLV27190716342_042018-F.jpg" /
+                .card-body
+                  h6.card-title Lorem Ipsum
+                  p.card-text
+                    a href="#"  Ver más
+                  p.card-text
+                    a href="#"  Añadir a carrito
+        .row
+          .col
+            .card-deck
+              .card.bg-info
+                img.card-img-top alt=("Foto del producto") src="https://http2.mlstatic.com/franelas-blancas-unicolor-para-estampar-D_NQ_NP_900550-MLV27190716342_042018-F.jpg" /
+                .card-body
+                  h6.card-title Lorem Ipsum
+                  p.card-text
+                    a href="#"  Ver más
+                  p.card-text
+                    a href="#"  Añadir a carrito
+              .card.bg-info
+                img.card-img-top alt=("Foto del producto") src="https://http2.mlstatic.com/franelas-blancas-unicolor-para-estampar-D_NQ_NP_900550-MLV27190716342_042018-F.jpg" /
+                .card-body
+                  h6.card-title Lorem Ipsum
+                  p.card-text
+                    a href="#"  Ver más
+                  p.card-text
+                    a href="#"  Añadir a carrito
+              .card.bg-info
+                img.card-img-top alt=("Foto del producto") src="https://http2.mlstatic.com/franelas-blancas-unicolor-para-estampar-D_NQ_NP_900550-MLV27190716342_042018-F.jpg" /
+                .card-body
+                  h6.card-title Lorem Ipsum
+                  p.card-text
+                    a href="#"  Ver más
+                  p.card-text
+                    a href="#"  Añadir a carrito
  
-
 == content_for :scripts do
   javascript:
