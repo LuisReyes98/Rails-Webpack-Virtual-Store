@@ -27,6 +27,8 @@ RAILS_ENV=production NODE_ENV=production bundle exec rails assets:precompile
 
 [Instrucciones de deploy de webpacker](https://github.com/rails/webpacker/blob/master/docs/deployment.md)
 
+[Instrucciones de deploy de heroku](https://devcenter.heroku.com/articles/getting-started-with-rails5#deploy-your-application-to-heroku)
+
 hacer deployment con deploy2 
 ```
 heroku create shiny-webpacker-app
