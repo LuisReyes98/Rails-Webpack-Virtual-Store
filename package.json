@@ -1,6 +1,9 @@
 {
   "name": "virtual_store",
   "private": true,
+  "engines": {
+    "node": ">=8.11"
+  },
   "dependencies": {
     "@rails/webpacker": "3.5",
     "activestorage": "^5.2.2-1",
@@ -14,12 +17,13 @@
     "vue": "^2.6.8",
     "vue-loader": "14.2.2",
     "vue-template-compiler": "^2.6.8",
+    "vue-template-compiler-loader": "^1.0.4",
+    "sass-loader": "^7.1.0",
+    "node-sass": "^4.11.0",
     "vue-turbolinks": "^2.0.4"
   },
   "devDependencies": {
-    "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler-loader": "^1.0.4",
     "webpack-dev-server": "2.11.2"
   }
 }
+
