@@ -25,7 +25,11 @@ Comando para compilar assets:
 RAILS_ENV=production NODE_ENV=production bundle exec rails assets:precompile
 ```
 
+[Instrucciones de deploy de webpacker](https://github.com/rails/webpacker/blob/master/docs/deployment.md)
+
 hacer deployment con deploy2 
 ```
-
+heroku create shiny-webpacker-app
+heroku addons:create heroku-postgresql:hobby-dev
+git push heroku deploy2:master
 ```
