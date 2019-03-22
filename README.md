@@ -22,5 +22,10 @@ foreman start -f Procfile.dev
 
 Comando para compilar assets:
 ```
-RAILS_ENV=production bundle exec rails assets:precompile
+RAILS_ENV=production NODE_ENV=production bundle exec rails assets:precompile
+```
+
+hacer deployment con deploy2 
+```
+
 ```
