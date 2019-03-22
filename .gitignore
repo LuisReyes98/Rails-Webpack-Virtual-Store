@@ -33,3 +33,6 @@ yarn-debug.log*
 
 #Web pack
 /node_modules
+
+#Mis archivos
+/Vistas
