@@ -1,5 +1,5 @@
 <script>
-import template from './nav.html.slim';
+import template from './sign_in.html.slim';
 
 export default {
   mixins: [template],
@@ -7,6 +7,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>
