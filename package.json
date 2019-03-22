@@ -2,7 +2,7 @@
   "name": "virtual_store",
   "private": true,
   "engines": {
-    "node": ">=8.11",
+    "node": ">=8.11"
   },
   "dependencies": {
     "@rails/webpacker": "3.5",
