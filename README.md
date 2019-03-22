@@ -32,4 +32,5 @@ hacer deployment con deploy2
 heroku create shiny-webpacker-app
 heroku addons:create heroku-postgresql:hobby-dev
 git push heroku deploy2:master
+heroku run rake db:migrate
 ```
