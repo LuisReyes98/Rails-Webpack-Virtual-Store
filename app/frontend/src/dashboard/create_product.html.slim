@@ -1,0 +1,35 @@
+.container-fluid
+  .row
+    dshsidebar
+    .col-sm-8
+      .container-fluid
+        h1 Nuevo producto
+        form action="products.html" method="POST" 
+          .form-group
+            label for="group"  Grupo
+            select#group.form-control name="" 
+              option value=""  Grupo 1
+              option value=""  Grupo 2
+              option value=""  Grupo 3
+              option value=""  Grupo 4
+          .form-group
+            label for="category"  Categoría
+            select#group.form-control name="" 
+              option value=""  Categoría 1
+              option value=""  Categoría 2
+              option value=""  Categoría 3
+              option value=""  Categoría 4
+          .form-group
+            label for="name"  Nombre
+            input#name.form-control type="text" /
+          .form-row
+            .form-group.col
+              label for="stock"  Inventario
+              input#stock.form-control name="" type="number" /
+            .form-group.col
+              label for="price"  Costo
+              input#price.form-control name="" type="number" /
+          .custom-file
+            input#image.custom-file-input name="" type="file" /
+            label.custom-file-label data-browse="Seleccionar" for="image"  Imagen
+          button.btn.btn-info type="submit"  Crear producto
