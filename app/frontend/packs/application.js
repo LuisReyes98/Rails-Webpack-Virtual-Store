@@ -11,6 +11,7 @@ import Vue from 'vue/dist/vue.esm';
 
 // Shared
 import NavBarStore from '../src/shared/navbar.vue';
+import HomeSideBar from '../src/shared/_sidebar.vue';
 
 // Home
 import Home from '../src/home.vue';
@@ -31,6 +32,7 @@ import '../assets/index.js';
 Vue.use(TurbolinksAdapter);
 //Shared
 Vue.component('navbarstore', NavBarStore);
+Vue.component('home_sidebar', HomeSideBar);
 // Home
 Vue.component('home', Home);
 // User

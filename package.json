@@ -9,21 +9,20 @@
     "activestorage": "^5.2.2-1",
     "bootstrap": "4.3.1",
     "jquery": "^3.3.1",
+    "node-sass": "^4.11.0",
     "popper.js": "^1.14.7",
     "rails-erb-loader": "^5.5.2",
     "rails-ujs": "^5.2.2-1",
+    "sass-loader": "^7.1.0",
     "slim-lang-loader": "0.0.7",
     "turbolinks": "^5.2.0",
     "vue": "^2.6.8",
     "vue-loader": "14.2.2",
     "vue-template-compiler": "^2.6.8",
     "vue-template-compiler-loader": "^1.0.4",
-    "sass-loader": "^7.1.0",
-    "node-sass": "^4.11.0",
     "vue-turbolinks": "^2.0.4"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"
   }
 }
-

@@ -1,0 +1,4 @@
+<% file_glob = Rails.application.root.join('app', 'frontend', 'assets', 'fonts', '**', '*.{eot,svg,ttf,woff,woff2}') %>
+<% Dir.glob(file_glob).each do |file| %>
+  import '<%= file %>';
+<% end %>

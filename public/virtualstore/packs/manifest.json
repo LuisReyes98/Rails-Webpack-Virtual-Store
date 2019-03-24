@@ -1,8 +1,17 @@
 {
-  "application.css": "/virtualstore/packs/application-bbf7f29dafef7afb2f5ad384eb8ab68b.css",
-  "application.css.map": "/virtualstore/packs/application-bbf7f29dafef7afb2f5ad384eb8ab68b.css.map",
-  "application.js": "/virtualstore/packs/application-d631afabf0e9522db2de.js",
-  "application.js.map": "/virtualstore/packs/application-d631afabf0e9522db2de.js.map",
-  "assets/images/image1.jpeg": "/virtualstore/packs/assets/images/image1-9310d2a6b18ddec471bda8e20985070a.jpeg",
-  "assets/images/image2.jpeg": "/virtualstore/packs/assets/images/image2-9310d2a6b18ddec471bda8e20985070a.jpeg"
+  "application.css": "/virtualstore/packs/application-67878cbe9e43f48b498014a3bd03055a.css",
+  "application.css.map": "/virtualstore/packs/application-67878cbe9e43f48b498014a3bd03055a.css.map",
+  "application.js": "/virtualstore/packs/application-100fe015f52259ab3d63.js",
+  "application.js.map": "/virtualstore/packs/application-100fe015f52259ab3d63.js.map",
+  "assets/fonts/materialdesignicons-webfont.eot?v=3.5.95": "/virtualstore/packs/assets/fonts/materialdesignicons-webfont-1993c4a16cce5446a5cfafacf4da740b.eot",
+  "assets/fonts/materialdesignicons-webfont.svg?v=3.5.95": "/virtualstore/packs/assets/fonts/materialdesignicons-webfont-032eb679a327d4668d7537c32c314fbc.svg",
+  "assets/fonts/materialdesignicons-webfont.ttf?v=3.5.95": "/virtualstore/packs/assets/fonts/materialdesignicons-webfont-baded94134f273450a473a4962111324.ttf",
+  "assets/fonts/materialdesignicons-webfont.woff2?v=3.5.95": "/virtualstore/packs/assets/fonts/materialdesignicons-webfont-af3f6dbe172a9c1aba77366a2ff630d1.woff2",
+  "assets/fonts/materialdesignicons-webfont.woff?v=3.5.95": "/virtualstore/packs/assets/fonts/materialdesignicons-webfont-26333b3884782fdb5f8c0a971f1d2570.woff",
+  "assets/fonts/materialdesignicons-webfont.eot": "/virtualstore/packs/assets/fonts/materialdesignicons-webfont-1993c4a16cce5446a5cfafacf4da740b.eot",
+  "assets/fonts/materialdesignicons-webfont.svg": "/virtualstore/packs/assets/fonts/materialdesignicons-webfont-032eb679a327d4668d7537c32c314fbc.svg",
+  "assets/fonts/materialdesignicons-webfont.ttf": "/virtualstore/packs/assets/fonts/materialdesignicons-webfont-baded94134f273450a473a4962111324.ttf",
+  "assets/fonts/materialdesignicons-webfont.woff": "/virtualstore/packs/assets/fonts/materialdesignicons-webfont-26333b3884782fdb5f8c0a971f1d2570.woff",
+  "assets/fonts/materialdesignicons-webfont.woff2": "/virtualstore/packs/assets/fonts/materialdesignicons-webfont-af3f6dbe172a9c1aba77366a2ff630d1.woff2",
+  "assets/images/shirt.jpg": "/virtualstore/packs/assets/images/shirt-fa210481ad59ccf38e41e33cf93228d8.jpg"
 }

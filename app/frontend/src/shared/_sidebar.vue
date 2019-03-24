@@ -1,10 +1,9 @@
 <script>
-import template from './home.html.slim';
+import template from './_sidebar.html.slim';
 
 export default {
   mixins: [template],
-  props: ["products","groups"],
-  
+  props: ["groups"],
 }
 </script>
 
