@@ -1,13 +1,28 @@
-.container.bg-secondary
-  h1 Registrar usuario
-  form action="index_after_login.html" method="POST" 
-    .form-group
-      label for="username"  Nombre de usuario
-      input#username.form-control placeholder=("Nombre de usuario") type="text" /
-    .form-group
-      label for="password"  Contraseña
-      input#password.form-control placeholder="Contraseña" type="password" /
-    .form-group
-      label for="password_confirmation"  Confirmar contraseña
-      input#password_confirmation.form-control placeholder=("Confirmar contraseña") type="password" /
+#signing
+  .alert.alert-danger v-if="errors" role="alert" 
+    | Error al iniciar sesión. Intente de nuevo
+  .container.mt-4.rounded.p-4.sign_form
+    .d-flex.justify-content-center
+      h1 Registrar Usuario
+    form @submit.prevent="submit_demo" action="" method="POST" 
+      .input-group.my-4
+        .input-group-prepend
+          label.input-group-text.field_name for="email"  
+            | Correo Electronico
+        input.form-control placeholder="Correo Electronico" id="email" v-model="email" :class="[validEmail ? 'is-valid' : 'is-invalid']" type="email" name="email" @input="onchange"
+        
+        .invalid-feedback v-show="!validEmail"
+          |  Ingrese un correo valido
+        
+        .valid-feedback v-show="validEmail"
+          |  Todo Bien
+      .input-group.my-4
+        .input-group-prepend
+          label.input-group-text.field_name for="password"  Contraseña
+        input#password.form-control placeholder="Contraseña" type="password"
+      .input-group.my-4
+        .input-group-prepend
+          label.input-group-text.field_name for="password"  Confirmar
+        input#password.form-control placeholder="Confirmar Contraseña" type="password"
+
     button.btn.btn-info type="submit"  Crear usuario

@@ -1,5 +1,10 @@
 # Tienda Virtual
 
+## Integrantes
+- Luis Reyes
+- Miguel Gallo
+
+## Informacion
 Pagina para el control de compra, venta e inventario de una tienda
 
 nombre de la gema en la pc de rogelio ```store```

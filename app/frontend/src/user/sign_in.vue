@@ -18,9 +18,7 @@ export default {
       return re.test(email);
     },
     onchange: function(ev) {
-      console.log("a change");
       this.validEmail = this.validateEmail(this.email);
-      // this.$emit('checkEmail',this.my_email,this.validEmail);
     }
   },
   
@@ -28,12 +26,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .sign_form{
-    background-color: #E4FFFC;
-  }
-  .field_name{
-    background-color: #A33400;
-    color: #ffffff;
-    font-weight: bold;
-  }
+
 </style>
