@@ -1,7 +1,7 @@
 class DashboardController < ApplicationController
   
   def orders
-    
+    @current_site = 'dashboard'
   end
 
   def products

@@ -7,6 +7,7 @@ export default {
 }
 </script>
 
+
 <style lang="scss" scoped>
   .group{
     text-transform: uppercase;

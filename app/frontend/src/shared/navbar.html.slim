@@ -1,26 +1,26 @@
-nav.navbar.navbar-expand-sm.navbar-dark.bg-danger
+nav.navbar.navbar-expand-sm.navbar-dark
   a.navbar-brand href="#"  Tu Tienda Online
   button.navbar-toggler aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button" 
     span.navbar-toggler-icon
   #navbarSupportedContent.collapse.navbar-collapse
     ul.navbar-nav.mr-auto
-      li.nav-item.active
+      li.nav-item :class="{ active: current_site === 'home' }"
         a.nav-link href="/" 
           | Inicio
           span.sr-only (página actual)
-      li.nav-item
+      li.nav-item :class="{ active: current_site === 'sign_in' }"
         a.nav-link href="/users/sign_in"  Iniciar sesión
-      li.nav-item
+
+      li.nav-item :class="{ active: current_site === 'cart' }"
         a.nav-link href=""  Carrito
 
-      li.nav-item
+      li.nav-item :class="{ active: current_site === 'dashboard' }"
         a.nav-link href="/dashboard/orders" Administrador
 
       tempate  v-if="logged"
-        li.nav-item
+        li.nav-item 
           a.nav-link href=""  Bienvenido (usuario)
-        
-      template v-if="logged"
+
         li.nav-item
           a.nav-link href=""  Cerrar sesión
 

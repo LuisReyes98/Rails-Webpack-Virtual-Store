@@ -3,16 +3,16 @@
     | Error al iniciar sesión. Intente de nuevo
   .container.bg-secondary
     h1 Iniciar sesión
-    form action="login_failed.html" method="POST" 
+    form action="" method="POST" 
       .form-group
         label for="username"  Nombre de usuario
-        input#username.form-control placeholder=("Nombre de usuario") type="text" /
+        input#username.form-control placeholder="Nombre de usuario" type="text" 
       .form-group
         label for="password"  Contraseña
-        input#password.form-control placeholder="Contraseña" type="password" /
+        input#password.form-control placeholder="Contraseña" type="password"
       .form-group.form-check
-        input#remember_token.form-check-input type="checkbox" /
+        input#remember_token.form-check-input type="checkbox"
         label for="remember_token"  Recuérdame
       button.btn.btn-lg.btn-info type="submit"  Iniciar sesión
-
-      a.btn.btn-md.btn-info.m-3 href="/users/sign_up" Registrar Nuevo Usuario
+      
+      a.btn.btn-md.btn-info.m-3 href="#" Registrar Nuevo Usuario
