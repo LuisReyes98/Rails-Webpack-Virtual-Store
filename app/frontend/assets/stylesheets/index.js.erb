@@ -1,4 +1,8 @@
-<% css_glob = Rails.application.root.join('app', 'frontend', 'assets', 'stylesheets', '**', '*.{css,scss,sass}') %>
-<% Dir.glob(css_glob).each do |file| %>
-  import '<%= file %>';
+<% prefix = 'assets/stylesheets/'%>
+<% files = [
+  'styles.scss',
+  'material_icons/materialdesignicons.scss'] 
+%>
+<% files.each do |file| %>
+  import '<%= prefix + file %>';
 <% end %>

@@ -39,6 +39,8 @@ class HomeController < ApplicationController
   end
   
   def cart
+    @current_site = 'cart'
+
     
   end
   
