@@ -1,18 +1,26 @@
 #signing
   .alert.alert-danger v-if="error" role="alert" 
     | Error al iniciar sesión. Intente de nuevo
-  .container.bg-secondary
-    h1 Iniciar sesión
-    form action="" method="POST" 
-      .form-group
-        label for="username"  Nombre de usuario
-        input#username.form-control placeholder="Nombre de usuario" type="text" 
-      .form-group
-        label for="password"  Contraseña
+  .container.mt-4.rounded.p-4.sign_form
+    .d-flex.justify-content-center
+      h1 Iniciar sesión
+    form @submit.prevent="submit_demo" action="" method="POST" 
+      .input-group.my-4
+        .input-group-prepend
+          label.input-group-text.field_name for="email"  
+            | Correo Electronico
+        input.form-control placeholder="Correo Electronico" id="email" v-model="email" type="email" name="email" @change="checkEmail" :class="[validEmail ? 'is-valid' : 'is-invalid']" value=""
+        p 
+          | {{email}}       
+        .invalid-feedback v-show="!validEmail"
+          | Ingrese un correo valido
+      .input-group.my-4
+        .input-group-prepend
+          label.input-group-text.field_name for="password"  Contraseña
         input#password.form-control placeholder="Contraseña" type="password"
-      .form-group.form-check
-        input#remember_token.form-check-input type="checkbox"
-        label for="remember_token"  Recuérdame
+      .custom-control.custom-checkbox.my-1.mr-sm-2
+        input#remember_token.custom-control-input type="checkbox"
+        label.custom-control-label for="remember_token"  Recuérdame
       button.btn.btn-lg.btn-info type="submit"  Iniciar sesión
       
-      a.btn.btn-md.btn-info.m-3 href="#" Registrar Nuevo Usuario
+      a.btn.btn-md.btn-info.m-3 href="/users/sign_up" Registrar Nuevo Usuario
