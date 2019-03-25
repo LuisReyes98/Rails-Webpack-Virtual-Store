@@ -1,8 +1,9 @@
-.container-fluid.home_side
+.col-4.home_sidebar
   template v-for="group in groups"
-    h3 
-      |  {{group.name}}
-    ul
+    ul.list-group
+      li.list-group-item.title
+        h3.group 
+          |  {{group.name}}
       template v-for="sub in group.subgroups"
-        li   
+        li.list-group-item.list-element   
           |  {{sub.name}}

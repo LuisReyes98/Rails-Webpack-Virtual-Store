@@ -1,10 +1,15 @@
 @import 'custom';
 
+
 @import "~bootstrap/scss/bootstrap";
 
-.home_side {
-  background-color: #C1F5F0;
-  padding: 4px;
-  margin: 0;
+@import 'animate';
 
+@import 'home_page';
+
+
+.container-full {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
 }

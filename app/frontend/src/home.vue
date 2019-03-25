@@ -10,4 +10,11 @@ export default {
 
 <style lang="scss" scoped>
 
-</style>
+  .item_container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+</style>  
