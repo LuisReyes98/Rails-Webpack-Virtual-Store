@@ -1,5 +1,5 @@
 #signing
-  .alert.alert-danger v-if="error" role="alert" 
+  .alert.alert-danger v-if="errors" role="alert" 
     | Error al iniciar sesión. Intente de nuevo
   .container.mt-4.rounded.p-4.sign_form
     .d-flex.justify-content-center
@@ -9,7 +9,13 @@
         .input-group-prepend
           label.input-group-text.field_name for="email"  
             | Correo Electronico
-        input.form-control placeholder="Correo Electronico" id="email" v-mode.lazy="email" type="email" name="email" 
+        input.form-control placeholder="Correo Electronico" id="email" v-model="email" :class="[validEmail ? 'is-valid' : 'is-invalid']" type="email" name="email" @input="onchange"
+        
+        .invalid-feedback v-show="!validEmail"
+          |  Ingrese un correo valido
+        
+        .valid-feedback v-show="validEmail"
+          |  Todo Bien
       .input-group.my-4
         .input-group-prepend
           label.input-group-text.field_name for="password"  Contraseña

@@ -2,12 +2,11 @@
 import template from './sign_in.html.slim';
 
 export default {
-  mixins: [template],  
+  mixins: [template],
+  props: ['email','validEmail','errors'],
   data: {
-    errors: [],
+    // my_email: this.email,
     password: null,
-    email: null,
-    validEmail: true,
   },
   methods: {
     submit_demo: function(){
@@ -18,10 +17,10 @@ export default {
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
     },
-    checkEmail: function() {
+    onchange: function(ev) {
       console.log("a change");
       this.validEmail = this.validateEmail(this.email);
-      
+      // this.$emit('checkEmail',this.my_email,this.validEmail);
     }
   },
   

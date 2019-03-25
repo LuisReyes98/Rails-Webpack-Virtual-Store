@@ -47,15 +47,15 @@ Vue.component('dshsidebar', DashSideBar);
 document.addEventListener('turbolinks:load', () => {
   const app = new Vue({
     el: '[data-behaviour="vue"]',
-    data:{
-      email: '',
-      validEmail: false,
-    },
-    methods: {
-      checkEmail: function(email,validEmail){
-        this.email = email;
-        this.validEmail = validEmail;
-      }
-    },
+    // data:{
+    //   email: '',
+    //   validEmail: false,
+    // },
+    // methods: {
+    //   checkEmail: function(email,validEmail){
+    //     this.email = email;
+    //     this.validEmail = validEmail;
+    //   }
+    // },
   });
 });
