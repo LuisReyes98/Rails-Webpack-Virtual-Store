@@ -17,4 +17,13 @@ export default {
     justify-content: center;
     align-items: center;
   }
+  .title{
+    font-size: 2rem;
+    color:#000;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  .option{
+    font-size: 0.5rem;
+  }
 </style>  

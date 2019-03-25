@@ -6,11 +6,14 @@
     .col-8.container-fluid.align-items-center.item_container      
       template v-for="product in products"
         .card.bg-info.col-sm-4.col-md-3.p-1.m-2
-          img.card-img-top :alt="product.name" :src="product.image_src"
+          img.card-img-top.product-image :alt="product.name" :src="product.image_src"
           .card-body
-            h6.card-title 
+            h6.card-title.title 
               | {{product.name}}
-            p.card-text
-              a href="#"  Ver más
-            p.card-text
-              a href="#"  Añadir a carrito
+            .d-inline-flex 
+              a class="btn btn-primary btn-sm mx-1" href="#"  
+                i.mdi.mx-1.mdi-eye-plus
+                | Ver más
+              a class="btn btn-success btn-sm mx-1" href="#"  
+                i.mdi.mx-1.mdi-cart-plus
+                | Añadir a carrito

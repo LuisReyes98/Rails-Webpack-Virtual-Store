@@ -6,10 +6,7 @@
 }
 
 .home_container {
-  display: flex;
-  width: 100%;
-  height: auto;
-  align-items: stretch;
+  @extend %big_container;
 
   .home_sidebar {
     padding: 15px;
@@ -31,5 +28,12 @@
 
   }
 
+  .product-image{
+    cursor: pointer;
+    &:hover{
+      @extend .animated;
+      @extend .pulse;
 
+    }
+  }
 }
