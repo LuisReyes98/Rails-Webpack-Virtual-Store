@@ -10,7 +10,7 @@ export default {
     validEmail: true,
   },
   methods: {
-    submit_demo: function() {
+    submit_demo: function(){
       console.log(this.email);
       console.log(this.validEmail);
     },
@@ -20,7 +20,7 @@ export default {
     },
     checkEmail: function() {
       console.log("a change");
-      this.valid_email = this.validateEmail(this.email);
+      this.validEmail = this.validateEmail(this.email);
       
     }
   },

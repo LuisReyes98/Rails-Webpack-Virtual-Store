@@ -1,12 +1,13 @@
 {
   "application.css": "/virtualstore/packs/application-920d944dd71ee7b1452ad01c54caf9a5.css",
   "application.css.map": "/virtualstore/packs/application-920d944dd71ee7b1452ad01c54caf9a5.css.map",
-  "application.js": "/virtualstore/packs/application-deda63da6dc44ef38310.js",
-  "application.js.map": "/virtualstore/packs/application-deda63da6dc44ef38310.js.map",
+  "application.js": "/virtualstore/packs/application-3c21b104e612289ce1c3.js",
+  "application.js.map": "/virtualstore/packs/application-3c21b104e612289ce1c3.js.map",
   "assets/fonts/materialdesignicons-webfont.eot": "/virtualstore/packs/assets/fonts/materialdesignicons-webfont-1993c4a16cce5446a5cfafacf4da740b.eot",
   "assets/fonts/materialdesignicons-webfont.svg?v=3.5.95": "/virtualstore/packs/assets/fonts/materialdesignicons-webfont-032eb679a327d4668d7537c32c314fbc.svg",
   "assets/fonts/materialdesignicons-webfont.ttf?v=3.5.95": "/virtualstore/packs/assets/fonts/materialdesignicons-webfont-baded94134f273450a473a4962111324.ttf",
   "assets/fonts/materialdesignicons-webfont.woff2?v=3.5.95": "/virtualstore/packs/assets/fonts/materialdesignicons-webfont-af3f6dbe172a9c1aba77366a2ff630d1.woff2",
   "assets/fonts/materialdesignicons-webfont.woff?v=3.5.95": "/virtualstore/packs/assets/fonts/materialdesignicons-webfont-26333b3884782fdb5f8c0a971f1d2570.woff",
+  "assets/images/gorra.jpg": "/virtualstore/packs/assets/images/gorra-48203dea56c8ed1302f131ad36e78a27.jpg",
   "assets/images/shirt.jpg": "/virtualstore/packs/assets/images/shirt-fa210481ad59ccf38e41e33cf93228d8.jpg"
 }

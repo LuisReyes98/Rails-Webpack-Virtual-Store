@@ -9,11 +9,7 @@
         .input-group-prepend
           label.input-group-text.field_name for="email"  
             | Correo Electronico
-        input.form-control placeholder="Correo Electronico" id="email" v-model="email" type="email" name="email" @change="checkEmail" :class="[validEmail ? 'is-valid' : 'is-invalid']" value=""
-        p 
-          | {{email}}       
-        .invalid-feedback v-show="!validEmail"
-          | Ingrese un correo valido
+        input.form-control placeholder="Correo Electronico" id="email" v-mode.lazy="email" type="email" name="email" 
       .input-group.my-4
         .input-group-prepend
           label.input-group-text.field_name for="password"  Contraseña
