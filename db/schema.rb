@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 2019_04_22_164528) do
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.string "category"
+    t.string "group"
     t.integer "stock"
     t.float "cost"
     t.datetime "created_at", null: false

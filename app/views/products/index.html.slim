@@ -1,27 +1,29 @@
-h1 Listing products
+dshproducts :products="#{@products.to_json}"
 
-table
-  thead
-    tr
-      th Name
-      th Category
-      th Stock
-      th Cost
-      th
-      th
-      th
+/ h1 Listing products
 
-  tbody
-    - @products.each do |product|
-      tr
-        td = product.name
-        td = product.category
-        td = product.stock
-        td = product.cost
-        td = link_to 'Show', product
-        td = link_to 'Edit', edit_product_path(product)
-        td = link_to 'Destroy', product, data: { confirm: 'Are you sure?' }, method: :delete
+/ table
+/   thead
+/     tr
+/       th Name
+/       th Category
+/       th Stock
+/       th Cost
+/       th
+/       th
+/       th
 
-br
+/   tbody
+/     - @products.each do |product|
+/       tr
+/         td = product.name
+/         td = product.category
+/         td = product.stock
+/         td = product.cost
+/         td = link_to 'Show', product
+/         td = link_to 'Edit', edit_product_path(product)
+/         td = link_to 'Destroy', product, data: { confirm: 'Are you sure?' }, method: :delete
 
-= link_to 'New Product', new_product_path
+/ br
+
+/ = link_to 'New Product', new_product_path

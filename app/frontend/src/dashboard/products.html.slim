@@ -33,9 +33,11 @@
                   | {{product.stock}} 
                 td
                   | {{product.cost}} 
+                  | {{product.id}} 
                 td
-                  a href=""  Ver
+                  a :href="'/products/' + product.id"  Ver
                 td
-                  a href=""  Editar
+                  a :href="'/products/' + product.id + '/edit'"  Editar
                 td
-                  a href=""  Eliminar
+                  a data-confirm="Are you sure?" rel="nofollow" data-method="delete" :href="'/products/' + product.id"
+                    | Eliminar

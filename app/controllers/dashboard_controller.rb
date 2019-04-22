@@ -43,16 +43,16 @@ class DashboardController < ApplicationController
 
   def users
     @current_site = 'dashboard'
+    
+    @users = User.all
 
-    @users = []
-
-    for i in 0..4 do
-      @users.append({
-        username: 'Jose',
-        access_level: 'admin',
-      })
+    # for i in 0..4 do
+    #   @users.append({
+    #     username: 'Jose',
+    #     access_level: 'admin',
+    #   })
       
-    end
+    # end
     
   end
   
@@ -64,5 +64,10 @@ class DashboardController < ApplicationController
   
   
   
-  
+  private
+    def set_current_user
+      @this_user = current_user
+    end
+    
+
 end

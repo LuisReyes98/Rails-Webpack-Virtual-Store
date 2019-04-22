@@ -1,1 +1,1 @@
-dashboard_users :users="#{@users.to_json}"
+dashboard_users :users="#{@users.to_json}" :access_levels="#{User.getAccessLevels.to_json}"

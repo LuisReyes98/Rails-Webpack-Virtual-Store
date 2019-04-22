@@ -5,7 +5,7 @@ import template from './users.html.slim';
 
 export default {
   mixins: [template],
-  props: ['users'],
+  props: ['users','access_levels'],
   
 }
 </script>
