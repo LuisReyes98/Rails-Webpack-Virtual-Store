@@ -27,6 +27,10 @@ class DashboardController < ApplicationController
       @products.append({
         name: 'Camisa',
         image_src: ActionController::Base.helpers.asset_pack_path('assets/images/shirt.jpg'),
+        group: 'Ropa',
+        category: 'Camisas',
+        stock: 12,
+        cost: 300.5,
       })
     end
     
