@@ -1,11 +1,11 @@
 
 <script>
 //name: dshproducts
-import template from './reports.html.slim';
+import template from './users.html.slim';
 
 export default {
   mixins: [template],
-  // props: ['reports'],
+  props: ['users'],
   
 }
 </script>

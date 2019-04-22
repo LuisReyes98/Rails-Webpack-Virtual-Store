@@ -4,12 +4,16 @@ Rails.application.routes.draw do
   
   root 'home#index'
   
-  get 'cart', to: 'home#cart'
+  get 'cart/', to: 'home#cart'
+
 
   get 'dashboard/orders/', to: 'dashboard#orders'
   get 'dashboard/products/', to: 'dashboard#products'
   get 'dashboard/create_product/', to: 'dashboard#create_product'
-  get 'dashboard/cart/', to: 'home#cart'
+
+  get 'dashboard/reports/', to: 'dashboard#reports'
+  get 'dashboard/users/', to: 'dashboard#users'
+  
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -27,6 +27,9 @@ import DashOrders from '../src/dashboard/orders.vue';
 import DashProducts from '../src/dashboard/products.vue';
 import DashSideBar from '../src/dashboard/shared/side_bar.vue';
 
+import DashboardUsers from '../src/dashboard/users.vue';
+import DashboarReports from '../src/dashboard/reports.vue';
+
 
 import '../assets/index.js';
 
@@ -42,11 +45,16 @@ Vue.component('home_page_cart', HomePageCart);
 // User
 Vue.component('signin', SignIn);
 Vue.component('signup', SignUp);
+
 // Dashboard
 Vue.component('dshnewproduct', DashCreateProduct);
 Vue.component('dshorders', DashOrders);
 Vue.component('dshproducts', DashProducts);
 Vue.component('dshsidebar', DashSideBar);
+
+
+Vue.component('dashboard_users', DashboardUsers);
+Vue.component('dashboard_reports', DashboarReports);
 
 
 document.addEventListener('turbolinks:load', () => {

@@ -36,6 +36,27 @@ class DashboardController < ApplicationController
     @current_site = 'dashboard'
     
   end
+
+  def users
+    @current_site = 'dashboard'
+
+    @users = []
+
+    for i in 0..4 do
+      @users.append({
+        username: 'Jose',
+        access_level: 'admin',
+      })
+      
+    end
+    
+  end
+  
+  def reports
+    @current_site = 'dashboard'
+    
+  end
+  
   
   
   
