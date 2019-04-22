@@ -15,6 +15,7 @@ import HomeSideBar from '../src/shared/_sidebar.vue';
 
 // Home
 import Home from '../src/home.vue';
+import HomePageCart from '../src/cart.vue';
 
 // Users
 import SignIn from '../src/user/sign_in.vue';
@@ -35,6 +36,9 @@ Vue.component('navbarstore', NavBarStore);
 Vue.component('home_sidebar', HomeSideBar);
 // Home
 Vue.component('home', Home);
+Vue.component('home_page_cart', HomePageCart);
+
+
 // User
 Vue.component('signin', SignIn);
 Vue.component('signup', SignUp);
@@ -44,18 +48,9 @@ Vue.component('dshorders', DashOrders);
 Vue.component('dshproducts', DashProducts);
 Vue.component('dshsidebar', DashSideBar);
 
+
 document.addEventListener('turbolinks:load', () => {
   const app = new Vue({
     el: '[data-behaviour="vue"]',
-    // data:{
-    //   email: '',
-    //   validEmail: false,
-    // },
-    // methods: {
-    //   checkEmail: function(email,validEmail){
-    //     this.email = email;
-    //     this.validEmail = validEmail;
-    //   }
-    // },
   });
 });

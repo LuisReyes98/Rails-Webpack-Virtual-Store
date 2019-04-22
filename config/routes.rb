@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'dashboard/orders/', to: 'dashboard#orders'
   get 'dashboard/products/', to: 'dashboard#products'
   get 'dashboard/create_product/', to: 'dashboard#create_product'
+  get 'dashboard/cart/', to: 'home#cart'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
