@@ -1,8 +1,11 @@
+<%# Route prefix of where the files are stored %>
 <% prefix = 'assets/stylesheets/'%>
+<%# List of files to import %>
 <% files = [
   'styles.scss',
   'material_icons/materialdesignicons.scss'] 
 %>
+<%# For each file to import , import it %>
 <% files.each do |file| %>
   import '<%= prefix + file %>';
 <% end %>

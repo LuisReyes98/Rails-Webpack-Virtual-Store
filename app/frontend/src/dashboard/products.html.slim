@@ -7,12 +7,10 @@
           h1 Productos
           input.form-control aria-label="Search" placeholder="Buscar" type="search" /
           button.btn.btn-info.my-2.my-sm-0 type="submit"  Buscar
-        
-        a.btn.btn-info href="/dashboard/create_product"  Crear producto
-
+        a.btn.btn-info href="create_product.html"  Crear producto
         table.table.table-bordered.table-hoverable
-          thead.thead-danger
-            tr
+          thead
+            tr.table-danger
               th scope="row"  Imagen
               th scope="row"  Grupo
               th scope="row"  Categoría
@@ -21,59 +19,25 @@
               th scope="row"  Costo
               th colspan="3" scope="row"  Opciones
           tbody
-            tr
-              td
-                img alt=("Foto del producto") height="100" src="https://cdn.shopify.com/s/files/1/1044/8640/products/gorras-gorra-tricolor-1_1024x1024.jpg?v=1503831163" width="100" /
-              td Lorem
-              td Lorem
-              td Lorem
-              td 12
-              td 9001
-              td
-                a href=""  Ver
-              td
-                a href=""  Editar
-              td
-                a href=""  Eliminar
-            tr
-              td
-                img alt=("Foto del producto") height="100" src="https://cdn.shopify.com/s/files/1/1044/8640/products/gorras-gorra-tricolor-1_1024x1024.jpg?v=1503831163" width="100" /
-              td Lorem
-              td Lorem
-              td Lorem
-              td.text-danger 0
-              td 9001
-              td
-                a href=""  Ver
-              td
-                a href=""  Editar
-              td
-                a href=""  Eliminar
-            tr
-              td
-                img alt=("Foto del producto") height="100" src="https://cdn.shopify.com/s/files/1/1044/8640/products/gorras-gorra-tricolor-1_1024x1024.jpg?v=1503831163" width="100" /
-              td Lorem
-              td Lorem
-              td Lorem
-              td.text-danger 0
-              td 9001
-              td
-                a href=""  Ver
-              td
-                a href=""  Editar
-              td
-                a href=""  Eliminar
-            tr
-              td
-                img alt=("Foto del producto") height="100" src="https://cdn.shopify.com/s/files/1/1044/8640/products/gorras-gorra-tricolor-1_1024x1024.jpg?v=1503831163" width="100" /
-              td Lorem
-              td Lorem
-              td Lorem
-              td 12
-              td 9001
-              td
-                a href=""  Ver
-              td
-                a href=""  Editar
-              td
-                a href=""  Eliminar
+            template v-for=("product in products") 
+              tr
+                td
+                  img :src="product.image_src" height="100" width="100" /
+                td
+                  | {{product.group}} 
+                td
+                  | {{product.category}} 
+                td
+                  | {{product.name}} 
+                td
+                  | {{product.stock}} 
+                td
+                  | {{product.cost}} 
+                  | {{product.id}} 
+                td
+                  a :href="'/products/' + product.id"  Ver
+                td
+                  a :href="'/products/' + product.id + '/edit'"  Editar
+                td
+                  a data-confirm="Are you sure?" rel="nofollow" data-method="delete" :href="'/products/' + product.id"
+                    | Eliminar

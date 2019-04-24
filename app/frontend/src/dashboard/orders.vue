@@ -3,6 +3,7 @@ import template from './orders.html.slim';
 
 export default {
   mixins: [template],
+  props: ['orders'],
   
 }
 </script>

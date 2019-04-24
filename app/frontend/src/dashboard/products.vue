@@ -5,6 +5,7 @@ import template from './products.html.slim';
 
 export default {
   mixins: [template],
+  props: ['products'],
   
 }
 </script>

@@ -18,55 +18,25 @@
               th scope="row"  Creador
               th colspan="3" scope="row"  Opciones
           tbody
-            tr
-              td 12
-              td 400
-              td.text-success Sí
-              td
-              td xx/xx/xx
-              td Lorem
-              td
-                a href=""  Ver
-              td
-                a href=""  Editar
-              td
-                a href=""  Eliminar
-            tr
-              td 12
-              td 300
-              td.text-danger No
-              td xx/xx/xx
-              td
-              td Lorem
-              td
-                a href=""  Ver
-              td
-                a href=""  Editar
-              td
-                a href=""  Eliminar
-            tr
-              td 12
-              td 200
-              td.text-success Sí
-              td
-              td xx/xx/xx
-              td Lorem
-              td
-                a href=""  Ver
-              td
-                a href=""  Editar
-              td
-                a href=""  Eliminar
-            tr
-              td 12
-              td 100
-              td.text-danger No
-              td xx/xx/xx
-              td
-              td Lorem
-              td
-                a href=""  Ver
-              td
-                a href=""  Editar
-              td
-                a href=""  Eliminar
+            template v-for="order in orders"
+              tr
+                td 
+                  | {{order.cuantity}}
+                td 
+                  | {{order.cost}}
+                template v-if="order.payed"
+                  td.text-success Sí
+                template v-else=""
+                  td.text-danger No                
+                td
+                  | {{order.expiration_date}}
+                td
+                  | {{order.payment_date}}
+                td 
+                 | {{order.creator}}
+                td
+                  a href=""  Ver
+                td
+                  a href=""  Editar
+                td
+                  a href=""  Eliminar

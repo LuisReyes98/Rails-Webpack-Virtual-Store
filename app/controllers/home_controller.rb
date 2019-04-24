@@ -40,6 +40,14 @@ class HomeController < ApplicationController
   
   def cart
     @current_site = 'cart'
+    @products = []
+
+    for i in 0..3 do
+      @products.append({
+        name: 'Camisa',
+        image_src: ActionController::Base.helpers.asset_pack_path('assets/images/shirt.jpg'),
+      })
+    end
 
     
   end
