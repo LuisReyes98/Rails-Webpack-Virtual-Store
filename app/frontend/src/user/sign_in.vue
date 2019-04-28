@@ -5,8 +5,7 @@ export default {
   mixins: [template],
   props: ['email','validEmail','errors'],
   data: {
-    // my_email: this.email,
-    password: null,
+    'typed_email': false,
   },
   methods: {
     submit_demo: function(){
@@ -18,6 +17,7 @@ export default {
       return re.test(email);
     },
     onchange: function(ev) {
+      this.typed_email = true;
       this.validEmail = this.validateEmail(this.email);
     }
   },

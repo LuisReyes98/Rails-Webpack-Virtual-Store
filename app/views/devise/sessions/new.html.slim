@@ -1,4 +1,4 @@
-signin inline-template=""
+signin inline-template="" v-bind:validEmail="true"
   #signing
     .container.mt-4.rounded.p-4.sign_form
       .d-flex.justify-content-center
@@ -14,7 +14,12 @@ signin inline-template=""
         .input-group.my-4
           .input-group-prepend
             = f.label :email , "Correo Electronico" ,:class => "input-group-text field_name"
-          = f.email_field :email, autocomplete: "email", :class=>"form-control" , :placeholder=>"Correo Electronico" , :"v-model"=>"email" , :":class"=>"[validEmail ? 'is-valid' : 'is-invalid']", :"@input"=>"onchange"
+          = f.email_field :email, autocomplete: "email", :class=>"form-control" , :placeholder=>"Correo Electronico" , :"v-model"=>"email" , :"v-bind:class"=>"{ 'is-invalid': !validEmail && typed_email , 'is-valid': validEmail && typed_email  }", :"@input"=>"onchange"
+
+          .invalid-feedback v-show="!validEmail && typed_email"
+            |  Ingrese un correo valido
+          .valid-feedback v-show="validEmail && typed_email"
+            |  Todo en Orden                      
         .input-group.my-4
           .input-group-prepend
             = f.label :password, "Contraseña" , :class=> "input-group-text field_name"
@@ -24,9 +29,9 @@ signin inline-template=""
           .custom-control.custom-checkbox.my-1.mr-sm-2          
             = f.check_box :remember_me, :class=>"custom-control-input"
             = f.label :remember_me ,"Recuerdame" ,:class=>"custom-control-label"
-        .actions
-          = f.submit "Iniciar Sesion" , :class=>"btn btn-lg btn-info"
-
+        .d-flex.justify-content-center.align-content-end
+          = f.submit "Iniciar Sesion" , :class=>"btn btn-lg btn-info m-1"
+        .d-flex
           = render "devise/shared/links"
         
 
