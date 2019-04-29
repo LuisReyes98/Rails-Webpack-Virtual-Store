@@ -1,16 +1,15 @@
-signin inline-template="" v-bind:validEmail="true"
+signin inline-template="" v-bind:validEmail="true" v-bind:typed_email="false"
   #signing
     .container.mt-4.rounded.p-4.sign_form
       .d-flex.justify-content-center
         h1 Iniciar sesión
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-        .alert.alert-danger v-if="errors" role="alert" 
-          | Error al iniciar sesión. Intente de nuevo
-
-        / .input-group.my-4
-        /   .input-group-prepend
-        /     = f.label :username , "Nombre de Usuario" , :"class" => "input-group-text field_name"
-        /   = f.text_field :username, :placeholder => "Nombre de Usuario" , autofocus: true, autocomplete: "username" , :class=>"form-control"
+        - if flash.any?
+          - flash.each do |type, msg|
+            - if type == "alert"
+              .alert.alert-danger.d-flex role="alert" 
+                .mdi.mdi-alert.mr-3
+                | Error al iniciar sesión. Contraseña o correo electronico incorrectos.
         .input-group.my-4
           .input-group-prepend
             = f.label :email , "Correo Electronico" ,:class => "input-group-text field_name"
@@ -32,27 +31,4 @@ signin inline-template="" v-bind:validEmail="true"
         .d-flex.justify-content-center.align-content-end
           = f.submit "Iniciar Sesion" , :class=>"btn btn-lg btn-info m-1"
         .d-flex
-          = render "devise/shared/links"
-        
-
-/#signing
-    form @submit.prevent="submit_demo" action="" method="POST" 
-          label.input-group-text.field_name for="email"  
-            | Correo Electronico
-        input.form-control placeholder="Correo Electronico" id="email" v-model="email" :class="[validEmail ? 'is-valid' : 'is-invalid']" type="email" name="email" @input="onchange"
-        
-        .invalid-feedback v-show="!validEmail"
-          |  Ingrese un correo valido
-        
-        .valid-feedback v-show="validEmail"
-          |  Todo Bien
-      .input-group.my-4
-        .input-group-prepend
-          label.input-group-text.field_name for="password"  Contraseña
-        input#password.form-control placeholder="Contraseña" type="password"
-      .custom-control.custom-checkbox.my-1.mr-sm-2
-        input#remember_token.custom-control-input type="checkbox"
-        label.custom-control-label for="remember_token"  Recuérdame
-      button.btn.btn-lg.btn-info type="submit"  Iniciar sesión
-      
-      a.btn.btn-md.btn-info.m-3 href="/users/sign_up" Registrar Nuevo Usuario      
+          = render "devise/shared/links"      

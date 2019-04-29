@@ -3,10 +3,8 @@ import template from './sign_in.html.slim';
 
 export default {
   mixins: [template],
-  props: ['email','validEmail','errors'],
-  data: {
-    'typed_email': false,
-  },
+  props: ['email','validEmail','errors','typed_email'],
+
   methods: {
     submit_demo: function(){
       console.log(this.email);

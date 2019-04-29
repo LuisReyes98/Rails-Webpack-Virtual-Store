@@ -8,7 +8,13 @@ html lang="es"
 
   body    
     div.container-full data-behaviour="vue" 
-      navbarstore :current_site="#{@current_site.to_json}"
+      <navbarstore 
+        | :current_site="#{@current_site.to_json}"       
+        - if user_signed_in?
+          | :current_username="#{current_user.username.to_json}"
+          | :isuser_signin="#{user_signed_in?}" 
+        |>
+        </navbarstore>
       == yield
 
 

@@ -13,8 +13,9 @@ class Users::SessionsController < Devise::SessionsController
   # POST /resource/sign_in
   def create
     @current_site = 'sign_in'
-
     super
+    
+
   end
 
   # DELETE /resource/sign_out
