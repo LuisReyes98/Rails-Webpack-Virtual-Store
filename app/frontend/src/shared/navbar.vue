@@ -3,7 +3,7 @@ import template from './navbar.html.slim';
 
 export default {
   mixins: [template],
-  props: ["current_site","current_username","admin_user","isuser_signin"],
+  props: ["current_site","current_username","user_access","isuser_signin"],
   
 }
 </script>

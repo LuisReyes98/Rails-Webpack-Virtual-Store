@@ -4,10 +4,10 @@
     .col-sm-8
       .container-fluid
         form.form-inline.my-2.my-lg-0 action="#" 
-          h1 Productos
+          h1.mt-3.mx-5 Productos
           input.form-control aria-label="Search" placeholder="Buscar" type="search" /
           button.btn.btn-info.my-2.my-sm-0 type="submit"  Buscar
-        a.btn.btn-info href="create_product.html"  Crear producto
+        a.btn.btn-block.btn-info.my-3 href="/dashboard/products/new"  Crear producto
         table.table.table-bordered.table-hoverable
           thead
             tr.table-danger
@@ -22,6 +22,7 @@
             template v-for=("product in products") 
               tr
                 td
+                  /Imagen
                   img :src="product.image_src" height="100" width="100" /
                 td
                   | {{product.group}} 
@@ -33,11 +34,10 @@
                   | {{product.stock}} 
                 td
                   | {{product.cost}} 
-                  | {{product.id}} 
                 td
-                  a :href="'/products/' + product.id"  Ver
+                  a :href="'/dashboard/products/' + product.id"  Ver
                 td
-                  a :href="'/products/' + product.id + '/edit'"  Editar
+                  a :href="'/dashboard/products/' + product.id + '/edit'"  Editar
                 td
-                  a data-confirm="Are you sure?" rel="nofollow" data-method="delete" :href="'/products/' + product.id"
+                  a data-confirm="Are you sure?" rel="nofollow" data-method="delete" :href="'/dashboard/products/' + product.id"
                     | Eliminar

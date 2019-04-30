@@ -12,7 +12,8 @@ html lang="es"
         | :current_site="#{@current_site.to_json}"       
         - if user_signed_in?
           | :current_username="#{current_user.username.to_json}"
-          | :isuser_signin="#{user_signed_in?}" 
+          | :isuser_signin="#{user_signed_in?.to_json}" 
+          | :user_access="#{current_user.access_level.to_json}" 
         |>
         </navbarstore>
       == yield

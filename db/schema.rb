@@ -43,6 +43,18 @@ ActiveRecord::Schema.define(version: 2019_04_22_164528) do
     t.index ["users_id"], name: "index_carts_on_users_id"
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "groups", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "orders", force: :cascade do |t|
     t.integer "cuantity"
     t.float "cost"
@@ -57,12 +69,14 @@ ActiveRecord::Schema.define(version: 2019_04_22_164528) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.string "category"
-    t.string "group"
+    t.bigint "category_id"
+    t.bigint "group_id"
     t.integer "stock"
     t.float "cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_products_on_category_id"
+    t.index ["group_id"], name: "index_products_on_group_id"
   end
 
   create_table "users", force: :cascade do |t|

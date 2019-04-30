@@ -22,11 +22,12 @@ import SignIn from '../src/user/sign_in.vue';
 import SignUp from '../src/user/sign_up.vue';
 
 // Dashboard
-import DashCreateProduct from '../src/dashboard/create_product.vue';
-import DashOrders from '../src/dashboard/orders.vue';
-import DashProducts from '../src/dashboard/products.vue';
-import DashSideBar from '../src/dashboard/shared/side_bar.vue';
+import DashCreateProduct from '../src/dashboard/products/create_product.vue';
+import DashProducts from '../src/dashboard/products/products.vue';
 
+
+import DashOrders from '../src/dashboard/orders.vue';
+import DashSideBar from '../src/dashboard/shared/side_bar.vue';
 import DashboardUsers from '../src/dashboard/users.vue';
 import DashboarReports from '../src/dashboard/reports.vue';
 
@@ -47,7 +48,7 @@ Vue.component('signin', SignIn);
 Vue.component('signup', SignUp);
 
 // Dashboard
-Vue.component('dshnewproduct', DashCreateProduct);
+Vue.component('dashboard_new_product', DashCreateProduct);
 Vue.component('dshorders', DashOrders);
 Vue.component('dshproducts', DashProducts);
 Vue.component('dshsidebar', DashSideBar);
