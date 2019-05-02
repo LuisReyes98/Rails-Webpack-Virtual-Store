@@ -3,7 +3,7 @@
     ul.list-group
       li.list-group-item.title
         h3.group 
-          |  {{group.name}}
-      template v-for="sub in group.subgroups"
+          |  {{group.name}}          
+      template v-for="category in group.categories"
         li.list-group-item.list-element   
-          |  {{sub.name}}
+          |  {{category.name}}

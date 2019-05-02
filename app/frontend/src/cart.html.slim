@@ -1,36 +1,40 @@
 .container
-  form action="" method="POST" 
-    .text-center
-      h1 Orden actual
-      h6 La orden se retira en la tienda
-    table.table
-      thead
-        tr.table-danger
-          th scope="row"  Imagen
-          th scope="row"  Grupo
-          th scope="row"  Categoría
-          th scope="row"  Nombre
-          th scope="row"  Cantidad
-          th scope="row"  Costo
-          th colspan="3" scope="row"  Opciones
-      tbody
-        template v-for=("product in products") 
-          tr
-            td
-              img :src="product.image_src" height="100" width="100" /
-            td  
-              | {{product.group}} 
-            td  
-              | {{product.categorie}} 
-            td  
-              | {{product.name}} 
-            td  
-              | {{product.ammount}} 
-            td  
-              | {{product.cost}} 
-            td
-              a href=""  Ver
-            td
-              a href=""  Eliminar
-    .col-12.d-flex.justify-content-center.pb-4
-      button.btn.btn-info type="submit"  Registrar orden
+  template v-if="is_user_signin"
+    form action="" method="POST" 
+      .text-center
+        h1 Carrito de compras
+        h6 Registra tu orden para proceder
+      table.table
+        thead
+          tr.table-danger
+            th scope="row"  Imagen
+            th scope="row"  Grupo
+            th scope="row"  Categoría
+            th scope="row"  Nombre
+            th scope="row"  Cantidad
+            th scope="row"  Costo
+            th colspan="3" scope="row"  Opciones
+        tbody
+          template v-for=("product in products") 
+            tr
+              td
+                img :src="product.image_src" height="100" width="100" /
+              td  
+                | {{product.group}} 
+              td  
+                | {{product.category}} 
+              td  
+                | {{product.name}} 
+              td  
+                | {{product.ammount}} 
+              td  
+                | {{product.cost}} 
+              td
+                a href=""  Ver
+              td
+                a href=""  Eliminar
+      .col-12.d-flex.justify-content-center.pb-4
+        button.btn.btn-info type="submit"  Registrar orden
+
+  template v-else=""
+    h1 Debes Iniciar Sesion para usar esta funcion

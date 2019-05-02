@@ -1,7 +1,5 @@
-class Product < ApplicationRecord
-    has_many :associations
-    has_many :orders, through: :associations
-    
+class Product < ApplicationRecord    
     # The product image
     has_one_attached :image
+
 end
