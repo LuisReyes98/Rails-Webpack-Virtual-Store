@@ -1,5 +1,5 @@
 nav.navbar.navbar-expand-sm.navbar-dark
-  a.navbar-brand href="#"  Tu Tienda Online
+  a.navbar-brand href="/"  Tu Tienda Online
   button.navbar-toggler aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button" 
     span.navbar-toggler-icon
   #navbarSupportedContent.collapse.navbar-collapse
@@ -21,12 +21,13 @@ nav.navbar.navbar-expand-sm.navbar-dark
         li.nav-item 
           a.nav-link href="" Bienvenido {{current_username}}
 
-        li.nav-item
-          a.nav-link href="/users/sign_out"  Cerrar sesión
 
       template  v-if="isuser_signin && user_access == 10"
         li.nav-item :class="{ active: current_site === 'dashboard' }"
           a.nav-link href="/dashboard/orders" Administrador
+
+      li.nav-item
+        a.nav-link.btn.btn-danger href="/users/sign_out"  Cerrar sesión
 
     form.form-inline.my-2.my-lg-0 action="#" 
       input.form-control aria-label="Search" placeholder="Buscar" type="search" /

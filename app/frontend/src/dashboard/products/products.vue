@@ -1,7 +1,7 @@
 
 <script>
 //name: dshproducts
-import template from './products.html.slim';
+import template from './show.html.slim';
 
 export default {
   mixins: [template],

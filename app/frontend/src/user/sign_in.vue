@@ -6,15 +6,11 @@ export default {
   props: ['email','validEmail','errors','typed_email'],
 
   methods: {
-    submit_demo: function(){
-      console.log(this.email);
-      console.log(this.validEmail);
-    },
     validateEmail: function (email) {
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
     },
-    onchange: function(ev) {
+    checkEmail: function(ev) {
       this.typed_email = true;
       this.validEmail = this.validateEmail(this.email);
     }

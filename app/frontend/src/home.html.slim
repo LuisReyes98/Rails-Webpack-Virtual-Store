@@ -8,12 +8,12 @@
     .col-8.container-fluid.align-items-center.item_container      
       template v-for="product in products"
         .card.bg-info.col-sm-4.col-md-3.p-1.m-2
-          img.card-img-top.product-image :alt="product.name"
+          img.card-img-top.product-image :alt="product.name" :src="product.image_src"
           .card-body
             h6.card-title.title 
               | {{product.name}}
             .d-inline-flex 
-              a class="btn btn-primary btn-sm mx-1" href="#"  
+              a class="btn btn-primary btn-sm mx-1" :href="'/dashboard/products/' + product.id"  
                 i.mdi.mx-1.mdi-eye-plus
                 | Ver más
               a class="btn btn-success btn-sm mx-1 add_to_cart"  href="#"  

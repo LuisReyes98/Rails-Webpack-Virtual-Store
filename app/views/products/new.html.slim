@@ -8,32 +8,39 @@ dashboard_new_product inline-template=""
 
           = form_for( @product) do |f|
             - if @product.errors.any?
-              #error_explanation
-                h2 = "#{pluralize(@product.errors.count, "error")} prohibited this product from being saved:"
-                ul
-                  - @product.errors.full_messages.each do |message|
-                    li = message
+              .alert-danger
+                #error_explanation
+                  h2 = "#{pluralize(@product.errors.count, "error")} prohibited this product from being saved:"
+                  ul
+                    - @product.errors.full_messages.each do |message|
+                      li = message
+            .form-group
+              = f.label :category_id
+              = f.text_field :category_id , :class=>"form-control"
 
-            .field
+            .form-group
+              = f.label :group_id
+              / = f.select :group_id , [["Select One", ""], "Cell", "Work", "Office", "Home", "Other"] ,{}, :class => 'form-control' 
+              = f.text_field :group_id , :class=>"form-control"
+
+            .form-group
               = f.label :name
-              = f.text_field :name
-            .field
-              = f.label :category
-              = f.text_field :category
-            .field
-              = f.label :group
-              = f.select :group , options_for_select([["Select One", ""], "Cell", "Work", "Office", "Home", "Other"]) 
-              = f.text_field :group
+              = f.text_field :name, :class=>"form-control"
+            .form-row
 
-            .field
-              = f.label :stock
-              = f.number_field :stock
-            .field
-              = f.label :cost
-              = f.text_field :cost
-            .field
-              = f.label :image
-              = f.file_field :image
-            .actions = f.submit
+              .form-group.col
+                = f.label :stock
+                = f.number_field :stock , :class=>"form-control"
+              .form-group.col
+                = f.label :cost
+                = f.text_field :cost, :class=>"form-control"
 
-          = link_to 'Back', products_path
+            .custom-file.my-3
+              = f.label :image , "Escoge una imagen", :class => "custom-file-label"
+              = f.file_field :image, :class => "custom-file-input"
+            
+            .d-flex.justify-content-center
+              = f.submit 'Crear Producto' , :class => 'btn btn-info'
+
+              = link_to 'Volver', products_path , :class => 'btn btn-danger'
+

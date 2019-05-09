@@ -13,7 +13,7 @@ signin inline-template="" v-bind:validEmail="true" v-bind:typed_email="false"
         .input-group.my-4
           .input-group-prepend
             = f.label :email , "Correo Electronico" ,:class => "input-group-text field_name"
-          = f.email_field :email, autocomplete: "email", :class=>"form-control" , :placeholder=>"Correo Electronico" , :"v-model"=>"email" , :"v-bind:class"=>"{ 'is-invalid': !validEmail && typed_email , 'is-valid': validEmail && typed_email  }", :"@input"=>"onchange"
+          = f.email_field :email, autocomplete: "email", :class=>"form-control" , :placeholder=>"Correo Electronico" , :"v-model"=>"email" , :"v-bind:class"=>"{ 'is-invalid': !validEmail && typed_email , 'is-valid': validEmail && typed_email  }", :"@input"=>"checkEmail"
 
           .invalid-feedback v-show="!validEmail && typed_email"
             |  Ingrese un correo valido

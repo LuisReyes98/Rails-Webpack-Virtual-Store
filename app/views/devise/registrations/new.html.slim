@@ -1,1 +1,35 @@
-signup
+signup inline-template="" v-bind:validEmail="true" v-bind:typed_email="false" v-bind:typed_password="false"
+  #signing
+    template
+      .alert.alert-danger role="alert" v-if="errors" 
+        | Error al Registrar Usuario. Intente de nuevo
+    .container.mt-4.rounded.p-4.sign_form
+      .d-flex.justify-content-center
+        h1 Registrar Usuario
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        .input-group.my-4
+          .input-group-prepend
+            = f.label :email,"Correo Electronico" , :class =>"input-group-text field_name"
+          = f.email_field :email, autofocus: true, autocomplete: "email" , :"v-bind:class"=>"{ 'is-invalid': !validEmail && typed_email , 'is-valid': validEmail && typed_email  }",	:"@input"=>"checkEmail" ,:class=>"form-control", :placeholder=>"Correo Electronico", :"v-model"=>"email"
+          .invalid-feedback v-show="!validEmail && typed_email"  
+            | Correo Invalido
+          .valid-feedback v-show="validEmail && typed_email"
+            |  Todo en Orden  
+        .input-group.my-4
+          .input-group-prepend
+            = f.label :password ,"Contraseña" , :class=>"input-group-text field_name"
+          = f.password_field :password, autocomplete: "new-password", :"@input"=>"checkPassword" ,:class=>"form-control", :"v-bind:class"=>"{ 'is-invalid': !samePassword && typed_password , 'is-valid': samePassword && typed_password  }" ,:placeholder=>"Contraseña", :"v-model"=>"password1"
+          .invalid-feedback v-show="!samePassword && typed_password"  
+            | Contraseñas no coinciden o invalidas
+          .valid-feedback v-show="samePassword && typed_password"
+            |  Todo en Orden  
+        .input-group.my-4
+          .input-group-prepend
+            = f.label :password_confirmation, "Confirmar" , :class=>" input-group-text field_name "              
+          =f.password_field :password_confirmation, autocomplete: "new-password" ,:"@input"=>"checkPassword", :class=>"form-control", :"v-bind:class"=>"{ 'is-invalid': !samePassword && typed_password , 'is-valid': samePassword && typed_password  }"	,:placeholder=>"Confirmar Contraseña", :"v-model"=>"password2"
+          .invalid-feedback v-show="!samePassword && typed_password"  
+            | Contraseñas no coinciden o invalidas
+          .valid-feedback v-show="samePassword && typed_password"
+            |  Todo en Orden  
+        .d-flex.justify-content-center
+          = f.submit "Registrar Nuevo Usuario" , :class => "btn btn-lg btn-info m-3"

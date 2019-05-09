@@ -1,33 +1,33 @@
-#signing
-  template
-    .alert.alert-danger role="alert" v-if="errors" 
-      | Error al Registrar Usuario. Intente de nuevo
-  .container.mt-4.rounded.p-4.sign_form
-    .d-flex.justify-content-center
-      h1 Registrar Usuario
-    / form @submit.prevent="submit_demo" action="" method="POST"
-    form action="/users/sign_up" method="POST"
-      .input-group.my-4
-        .input-group-prepend
-          label.input-group-text.field_name for="email" 
-            | Correo Electronico
-        input :class="[validEmail ? 'is-valid' : 'is-invalid']"	@input="onchange" class="form-control" id="email" name="email" placeholder="Correo Electronico" type="email" v-model="email"
-        .invalid-feedback v-show="!validEmail"  
-          | Correo Invalido
-      .input-group.my-4
-        .input-group-prepend
-          label.input-group-text.field_name for="password" 
-            | Contraseña
-        input @input="checkPassword" class="form-control" :class="[samePassword ? 'is-valid' : 'is-invalid']" id="password" name="password1" placeholder="Contraseña" type="password" v-model="password1"
-        .invalid-feedback v-show="!samePassword"  
-          | Contraseñas no coinciden o invalidas
-      .input-group.my-4
-        .input-group-prepend
-          label.input-group-text.field_name for="password_confirm" 
-            | Confirmar
-        input @input="checkPassword" class="form-control" :class="[samePassword ? 'is-valid' : 'is-invalid']"	id="password_confirm" placeholder="Confirmar Contraseña" type="password" name="password2" v-model="password2"
-        .invalid-feedback v-show="!samePassword"  
-          | Contraseñas no coinciden o invalidas
-      .d-flex.justify-content-center
-        button.btn.btn-lg.btn-info.m-3 type="submit"  
-          | Registrar Nuevo Usuario
+/ #signing
+/   template
+/     .alert.alert-danger role="alert" v-if="errors" 
+/       | Error al Registrar Usuario. Intente de nuevo
+/   .container.mt-4.rounded.p-4.sign_form
+/     .d-flex.justify-content-center
+/       h1 Registrar Usuario
+/     / form @submit.prevent="submit_demo" action="" method="POST"
+/     form action="/users/sign_up" method="POST"
+/       .input-group.my-4
+/         .input-group-prepend
+/           label.input-group-text.field_name for="email" 
+/             | Correo Electronico
+/         input :class="[validEmail ? 'is-valid' : 'is-invalid']"	@input="onchange" class="form-control" id="email" name="email" placeholder="Correo Electronico" type="email" v-model="email"
+/         .invalid-feedback v-show="!validEmail"  
+/           | Correo Invalido
+/       .input-group.my-4
+/         .input-group-prepend
+/           label.input-group-text.field_name for="password" 
+/             | Contraseña
+/         input @input="checkPassword" class="form-control" :class="[samePassword ? 'is-valid' : 'is-invalid']" id="password" name="password1" placeholder="Contraseña" type="password" v-model="password1"
+/         .invalid-feedback v-show="!samePassword"  
+/           | Contraseñas no coinciden o invalidas
+/       .input-group.my-4
+/         .input-group-prepend
+/           label.input-group-text.field_name for="password_confirm" 
+/             | Confirmar
+/         input @input="checkPassword" class="form-control" :class="[samePassword ? 'is-valid' : 'is-invalid']"	id="password_confirm" placeholder="Confirmar Contraseña" type="password" name="password2" v-model="password2"
+/         .invalid-feedback v-show="!samePassword"  
+/           | Contraseñas no coinciden o invalidas
+/       .d-flex.justify-content-center
+/         button.btn.btn-lg.btn-info.m-3 type="submit"  
+/           | Registrar Nuevo Usuario

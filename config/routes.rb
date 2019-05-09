@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get 'cart/', to: 'home#cart'
 
   get 'dashboard/orders/', to: 'dashboard#orders'
-  get 'dashboard/create_product/', to: 'dashboard#create_product'
+  # get 'dashboard/create_product/', to: 'dashboard#create_product'
   get 'dashboard/reports/', to: 'dashboard#reports'
   get 'dashboard/users/', to: 'dashboard#users'
   

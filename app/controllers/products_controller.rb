@@ -4,7 +4,21 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @products = []
+    products_db = Product.all
+    for pro in products_db do
+      @products.append(          
+        {
+          group: Group.find(pro.group_id).name,
+          category: Category.find(pro.category_id).name,
+          name: pro.name,
+          cost: pro.cost,
+          stock: pro.stock,
+          id: pro.id,
+        }) 
+      
+    end
+
   end
 
   # GET /products/1
@@ -25,6 +39,8 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
+
+    @product.image.attach(params[:image])
 
     respond_to do |format|
       if @product.save
@@ -69,6 +85,7 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :category, :stock, :cost)
+      params.require(:product).permit(:name, :category, :stock, :cost, :image) 
     end
+
 end

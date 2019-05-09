@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(version: 2019_05_02_205539) do
   create_table "users_carts_conectors", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "product_id"
+    t.integer "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_users_carts_conectors_on_product_id"

@@ -3,7 +3,17 @@ class HomeController < ApplicationController
   def index
     @current_site = 'home'
 
-    @products = Product.all()
+    all_products = Product.all()
+    
+    @products = []
+    for pro in all_products do
+      @products.append({
+        name: pro.name,
+        id: pro.id,
+        image_src: url_for(pro.image)
+      })
+    end
+
 
     groups = Group.all()
     
@@ -24,17 +34,19 @@ class HomeController < ApplicationController
       userProducts = UsersCartsConector.where(:user_id => current_user.id)
 
       for product in userProducts do
-        temp_product = Product.find(product.product_id)
+        product_data = Product.find(product.product_id)
 
         @products.append(          
           {
             product_id: product.product_id,
-            name: temp_product.name,
-            cost: temp_product.cost,
-            group: Group.find(temp_product.group_id).name,
-            category: Group.find(temp_product.group_id).name,
-            ammount: 1,          
-          })              
+            name: product_data.name,
+            cost: product_data.cost,
+            group: Group.find(product_data.group_id).name,
+            category: Category.find(product_data.category_id).name,
+            amount: product.amount,          
+          })         
+          
+        
       end
     end
   end
