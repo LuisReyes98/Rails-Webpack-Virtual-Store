@@ -1,0 +1,15 @@
+= form_for @users_carts_conector do |f|
+  - if @users_carts_conector.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@users_carts_conector.errors.count, "error")} prohibited this users_carts_conector from being saved:"
+      ul
+        - @users_carts_conector.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :user
+    = f.text_field :user
+  .field
+    = f.label :product
+    = f.text_field :product
+  .actions = f.submit

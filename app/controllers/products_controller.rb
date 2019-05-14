@@ -15,6 +15,8 @@ class ProductsController < ApplicationController
           cost: pro.cost,
           stock: pro.stock,
           id: pro.id,
+          image_src: url_for(pro.image),   
+
         }) 
       
     end

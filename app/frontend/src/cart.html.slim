@@ -30,11 +30,12 @@
               td  
                 | {{product.cost}} 
               td
-                a href=""  Ver
+                a :href="'/dashboard/products/' + product.product_id"  Ver
               td
-                a href=""  Eliminar
+                div v-html="product.destroy_link"
       .col-12.d-flex.justify-content-center.pb-4
         button.btn.btn-info type="submit"  Registrar orden
 
   template v-else=""
-    h1 Debes Iniciar Sesion para usar esta funcion
+    .d-flex.p-4.justify-content-center
+      h1.font-weight-bolder Debes Iniciar Sesión para usar esta función

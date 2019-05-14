@@ -1,14 +1,14 @@
 .col-sm-4.admin__sidebar.pt-4.pb-4
-  ul.list-group
-    li.list-group-item
-      a href="/dashboard/products" 
+  ul.list-group   
+    li.list-group-item v-bind:class="{ 'bg-dark': current_section === 'products' }"
+      a.text-decoration-none href="/dashboard/products" v-bind:class="{ 'text-light': current_section === 'products' }"
         h3 Productos
-    li.list-group-item
-      a href="/dashboard/orders" 
+    li.list-group-item v-bind:class="{ 'bg-dark': current_section === 'orders' }"
+      a.text-decoration-none  href="/dashboard/orders" :class="{ 'text-light': current_section === 'orders' }"
         h3 Órdenes
-    li.list-group-item
-      a href="/dashboard/users/" 
+    li.list-group-item v-bind:class="{ 'bg-dark': current_section === 'users' }"
+      a.text-decoration-none  href="/dashboard/users/" :class="{ 'text-light': current_section === 'users' }"
         h3 Usuarios
-    li.list-group-item
-      a href="/dashboard/reports/" 
+    li.list-group-item v-bind:class="{ 'bg-dark': current_section === 'reports' }"
+      a.text-decoration-none href="/dashboard/reports/" :class="{ 'text-light': current_section === 'reports' }"
         h3 Reportes    

@@ -1,0 +1,23 @@
+h1 Listing users_carts_conectors
+
+table
+  thead
+    tr
+      th User
+      th Product
+      th
+      th
+      th
+
+  tbody
+    - @users_carts_conectors.each do |users_carts_conector|
+      tr
+        td = users_carts_conector.user
+        td = users_carts_conector.product
+        td = link_to 'Show', users_carts_conector
+        td = link_to 'Edit', edit_users_carts_conector_path(users_carts_conector)
+        td = link_to 'Destroy', users_carts_conector, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Users carts conector', new_users_carts_conector_path

@@ -1,7 +1,7 @@
-dashboard_new_product inline-template=""
+dashboard_new_product inline-template="" :current_section="'products'"
   .container-fluid
     .row
-      dshsidebar 
+      dshsidebar :current_section="current_section"
       .col-sm-8
         .container-fluid
           h1 Nuevo producto

@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong User:
+  = @users_carts_conector.user
+p
+  strong Product:
+  = @users_carts_conector.product
+
+=> link_to 'Edit', edit_users_carts_conector_path(@users_carts_conector)
+'|
+=< link_to 'Back', users_carts_conectors_path

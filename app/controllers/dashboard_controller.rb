@@ -18,23 +18,6 @@ class DashboardController < ApplicationController
 
   end
 
-  # def products
-  #   @current_site = 'dashboard'
-
-  #   @products = []
-
-  #   for i in 0..3 do
-  #     @products.append({
-  #       name: 'Camisa',
-  #       image_src: ActionController::Base.helpers.asset_pack_path('assets/images/shirt.jpg'),
-  #       group: 'Ropa',
-  #       category: 'Camisas',
-  #       stock: 12,
-  #       cost: 300.5,
-  #     })
-  #   end
-    
-  # end
 
   def create_product
     @current_site = 'dashboard'
@@ -44,7 +27,18 @@ class DashboardController < ApplicationController
   def users
     @current_site = 'dashboard'
     
-    @users = User.all
+    users = User.all
+    
+    @users = []
+
+    for user in users do
+      @users.append({
+        email: user.email,
+        access_level: user.access_level,
+        username: user.username,
+        delete_link: (helpers.link_to "Borrar", admin_destroy_user_path(user), method: :delete, data: { confirm: "Seguro de borrar #{user.email} ?" }),
+      })
+    end
 
     # for i in 0..4 do
     #   @users.append({
@@ -64,10 +58,10 @@ class DashboardController < ApplicationController
   
   
   
-  private
-    def set_current_user
-      @this_user = current_user
-    end
+  # private
+  #   def set_current_user
+  #     @this_user = current_user
+  #   end
     
 
 end

@@ -5,7 +5,7 @@ import template from './reports.html.slim';
 
 export default {
   mixins: [template],
-  // props: ['reports'],
+  props: ['current_section'],
   
 }
 </script>

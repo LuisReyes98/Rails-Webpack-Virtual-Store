@@ -2,6 +2,7 @@ class HomeController < ApplicationController
   
   def index
     @current_site = 'home'
+    @users_carts_conector = UsersCartsConector.new
 
     all_products = Product.all()
     
@@ -10,7 +11,10 @@ class HomeController < ApplicationController
       @products.append({
         name: pro.name,
         id: pro.id,
-        image_src: url_for(pro.image)
+        image_src: url_for(pro.image),
+        add_to_cart_link: ( helpers.button_to( users_carts_conectors_path( user_id: current_user.id, product_id: pro.id,amount: 1), method: :post , :class=>" btn btn-success btn-sm mx-1 add_to_cart")do
+          '<i class="mdi mx-1 mdi-cart-plus" ></i> Añadir a Carrito'.html_safe
+        end)
       })
     end
 
@@ -43,7 +47,10 @@ class HomeController < ApplicationController
             cost: product_data.cost,
             group: Group.find(product_data.group_id).name,
             category: Category.find(product_data.category_id).name,
-            amount: product.amount,          
+            amount: product.amount,   
+            image_src: url_for(product_data.image),  
+            id:  product.id,
+            destroy_link: (helpers.link_to 'Eliminar', product, data: {}, method: :delete)
           })         
           
         

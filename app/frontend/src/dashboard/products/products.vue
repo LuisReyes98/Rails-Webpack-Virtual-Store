@@ -1,11 +1,11 @@
 
 <script>
 //name: dshproducts
-import template from './show.html.slim';
+import template from './products.html.slim';
 
 export default {
   mixins: [template],
-  props: ['products'],
+  props: ['products','current_section'],
   
 }
 </script>

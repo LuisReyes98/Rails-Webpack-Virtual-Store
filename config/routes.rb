@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  resources :carts
-  resources :orders
-  
+  resources :users_carts_conectors
+  # resources :orders
 
   scope '/dashboard' do
     # Products
@@ -11,8 +10,8 @@ Rails.application.routes.draw do
   
   # devise_for :users
   devise_for :users, controllers: { sessions: 'users/sessions' }
+  match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy_user
   
-  # match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy_user
   # post 'users/signup', to: 'users#signup'
 
   root 'home#index'

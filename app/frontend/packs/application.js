@@ -50,7 +50,7 @@ Vue.component('signup', SignUp);
 // Dashboard
 Vue.component('dashboard_new_product', DashCreateProduct);
 Vue.component('dshorders', DashOrders);
-Vue.component('dshproducts', DashProducts);
+Vue.component('dashboard_products', DashProducts);
 Vue.component('dshsidebar', DashSideBar);
 
 
