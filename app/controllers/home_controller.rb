@@ -12,9 +12,10 @@ class HomeController < ApplicationController
         name: pro.name,
         id: pro.id,
         image_src: url_for(pro.image),
-        add_to_cart_link: ( helpers.button_to( users_carts_conectors_path( user_id: current_user.id, product_id: pro.id,amount: 1), method: :post , :class=>" btn btn-success btn-sm mx-1 add_to_cart")do
+
+        add_to_cart_link: user_signed_in? ? ( helpers.button_to( users_carts_conectors_path( user_id: current_user.id, product_id: pro.id,amount: 1), method: :post , :class=>" btn btn-success btn-sm mx-1 add_to_cart")do
           '<i class="mdi mx-1 mdi-cart-plus" ></i> Añadir a Carrito'.html_safe
-        end)
+        end) : '<button class="btn btn-success btn-sm mx-1 add_to_cart"> <i class="mdi mx-1 mdi-cart-plus" ></i> Añadir a Carrito </button>'.html_safe
       })
     end
 
