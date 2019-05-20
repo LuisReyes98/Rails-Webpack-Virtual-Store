@@ -16,6 +16,7 @@ import HomeSideBar from '../src/shared/_sidebar.vue';
 // Home
 import Home from '../src/home.vue';
 import HomePageCart from '../src/cart.vue';
+import HomeProductShow from '../src/a_product.vue';
 
 // Users
 import SignIn from '../src/user/sign_in.vue';
@@ -41,6 +42,7 @@ Vue.component('home_sidebar', HomeSideBar);
 // Home
 Vue.component('home', Home);
 Vue.component('home_page_cart', HomePageCart);
+Vue.component('home_product_show', HomeProductShow);
 
 
 // User

@@ -40,7 +40,7 @@ dashboard_new_product inline-template="" :current_section="'products'"
               = f.file_field :image, :class => "custom-file-input"
             
             .d-flex.justify-content-center
-              = f.submit 'Crear Producto' , :class => 'btn btn-info'
+              = f.submit 'Crear Producto' , :class => 'btn btn-info', :id=>"submit_button"
 
               = link_to 'Volver', products_path , :class => 'btn btn-danger'
 

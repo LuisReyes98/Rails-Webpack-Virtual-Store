@@ -1,14 +1,14 @@
 .col-sm-4.admin__sidebar.pt-4.pb-4
   ul.list-group   
     li.list-group-item v-bind:class="{ 'bg-dark': current_section === 'products' }"
-      a.text-decoration-none href="/dashboard/products" v-bind:class="{ 'text-light': current_section === 'products' }"
+      a.text-decoration-none href="/dashboard/products" :class="{ 'text-light': current_section === 'products' }" id="products_section"
         h3 Productos
     li.list-group-item v-bind:class="{ 'bg-dark': current_section === 'orders' }"
-      a.text-decoration-none  href="/dashboard/orders" :class="{ 'text-light': current_section === 'orders' }"
+      a.text-decoration-none  href="/dashboard/orders" :class="{ 'text-light': current_section === 'orders' }" id="orders_section"
         h3 Órdenes
     li.list-group-item v-bind:class="{ 'bg-dark': current_section === 'users' }"
-      a.text-decoration-none  href="/dashboard/users/" :class="{ 'text-light': current_section === 'users' }"
+      a.text-decoration-none  href="/dashboard/users/" :class="{ 'text-light': current_section === 'users' }" id="users_section"
         h3 Usuarios
     li.list-group-item v-bind:class="{ 'bg-dark': current_section === 'reports' }"
-      a.text-decoration-none href="/dashboard/reports/" :class="{ 'text-light': current_section === 'reports' }"
+      a.text-decoration-none href="/dashboard/reports/" :class="{ 'text-light': current_section === 'reports' }" id="reports_section"
         h3 Reportes    

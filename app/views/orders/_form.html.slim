@@ -7,21 +7,9 @@
           li = message
 
   .field
-    = f.label :cuantity
-    = f.number_field :cuantity
-  .field
     = f.label :cost
     = f.text_field :cost
   .field
-    = f.label :payed
-    = f.check_box :payed
-  .field
-    = f.label :expiration_date
-    = f.text_field :expiration_date
-  .field
-    = f.label :payment_date
-    = f.text_field :payment_date
-  .field
-    = f.label :user
-    = f.text_field :user
+    = f.label :items_number
+    = f.number_field :items_number
   .actions = f.submit

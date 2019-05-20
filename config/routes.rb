@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :users_carts_conectors
   # resources :orders
-
+  resources :orders
+  
   scope '/dashboard' do
     # Products
     resources :products    
@@ -15,8 +16,12 @@ Rails.application.routes.draw do
   # post 'users/signup', to: 'users#signup'
 
   root 'home#index'
+
+  post 'register_order', to: 'home#register_order'
   
   get 'cart/', to: 'home#cart'
+  
+  get 'display_product/:id', to: 'home#product'
 
   get 'dashboard/orders/', to: 'dashboard#orders'
   # get 'dashboard/create_product/', to: 'dashboard#create_product'

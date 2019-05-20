@@ -3,16 +3,16 @@ class DashboardController < ApplicationController
   def orders
     @current_site = 'dashboard'
 
+    orders = Order.all
     @orders = []
-    
-    for i in 0..3 do
+    for order in orders do
+      user = User.find(order.user_id)
       @orders.append({
-        cuantity: 12,
-        cost: 300.0,
-        payed: true ,
-        expiration_date: '14/12/19',
-        payment_date: '01/12/19',
-        creator: 'Luis',        
+        cost: order.cost,
+        items_number: order.items_number,
+        due_date: "Nan",
+        created_at: order.created_at,
+        creator: user.email,
       })
     end
 

@@ -12,8 +12,8 @@ p
 p
   strong Cost:
   = @product.cost
-
-img src="#{url_for(@product.image)}" style=" width: 100px; height: 100px;"
+- if @product.image
+  img src="#{url_for(@product.image)}" style=" width: 100px; height: 100px;"
 
 => link_to 'Edit', edit_product_path(@product)
 '|

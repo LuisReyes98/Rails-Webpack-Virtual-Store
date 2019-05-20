@@ -13,7 +13,7 @@
               th scope="row"  Cantidad
               th scope="row"  Costo
               th scope="row"  Pagada
-              th scope="row"  Fecha de expiración
+              th scope="row"  Fecha de creacion
               th scope="row"  Fecha de pago
               th scope="row"  Creador
               th colspan="3" scope="row"  Opciones
@@ -21,7 +21,7 @@
             template v-for="order in orders"
               tr
                 td 
-                  | {{order.cuantity}}
+                  | {{order.items_number}}
                 td 
                   | {{order.cost}}
                 template v-if="order.payed"
@@ -29,9 +29,9 @@
                 template v-else=""
                   td.text-danger No                
                 td
-                  | {{order.expiration_date}}
+                  | {{order.created_at}}
                 td
-                  | {{order.payment_date}}
+                  | {{order.due_date}}
                 td 
                  | {{order.creator}}
                 td

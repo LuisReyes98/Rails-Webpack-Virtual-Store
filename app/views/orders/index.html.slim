@@ -3,12 +3,8 @@ h1 Listing orders
 table
   thead
     tr
-      th Cuantity
       th Cost
-      th Payed
-      th Expiration date
-      th Payment date
-      th User
+      th Items number
       th
       th
       th
@@ -16,12 +12,8 @@ table
   tbody
     - @orders.each do |order|
       tr
-        td = order.cuantity
         td = order.cost
-        td = order.payed
-        td = order.expiration_date
-        td = order.payment_date
-        td = order.user
+        td = order.items_number
         td = link_to 'Show', order
         td = link_to 'Edit', edit_order_path(order)
         td = link_to 'Destroy', order, data: { confirm: 'Are you sure?' }, method: :delete

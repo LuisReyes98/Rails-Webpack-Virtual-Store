@@ -19,7 +19,7 @@ nav.navbar.navbar-expand-sm.navbar-dark
 
       template  v-if="isuser_signin && user_access == 10"
         li.nav-item :class="{ active: current_site === 'dashboard' }"
-          a.nav-link href="/dashboard/orders" Administrador
+          a.nav-link href="/dashboard/orders" id="admin_nav_link" Administrador
 
       template  v-if="isuser_signin"
         li.nav-item 
@@ -28,6 +28,6 @@ nav.navbar.navbar-expand-sm.navbar-dark
         li.nav-item
           a.nav-link.btn.btn-danger href="/users/sign_out" id="close_session_link" Cerrar sesión
 
-    form.form-inline.my-2.my-lg-0 action="#" 
+    /form.form-inline.my-2.my-lg-0 action="#" 
       input.form-control aria-label="Search" placeholder="Buscar" type="search" /
       button.btn.btn-light.my-2.my-sm-0 type="submit"  Buscar  

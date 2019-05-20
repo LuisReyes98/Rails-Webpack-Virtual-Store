@@ -13,6 +13,9 @@
             th scope="row"  Nombre
             th scope="row"  Cantidad
             th scope="row"  Costo
+            th scope="row"  Orden registrada
+            th scope="row"  Fecha de entrega
+            th scope="row"  ID orden
             th colspan="3" scope="row"  Opciones
         tbody
           template v-for=("product in products") 
@@ -30,12 +33,23 @@
               td  
                 | {{product.cost}} 
               td
-                a :href="'/dashboard/products/' + product.product_id"  Ver
+                template v-if="product.in_order"  
+                  | Si
+                template v-else="product.in_order"  
+                  | No
+              td  
+                | {{product.order_due}} 
+              td  
+                | {{product.order_id}}                 
+              td
+                a.btn.btn-primary :href="'/display_product/' + product.product_id"  Ver
               td
                 div v-html="product.destroy_link"
       .col-12.d-flex.justify-content-center.pb-4
-        button.btn.btn-info type="submit"  Registrar orden
+        div.flex-fill v-html="register_order_button"
 
   template v-else=""
     .d-flex.p-4.justify-content-center
       h1.font-weight-bolder Debes Iniciar Sesión para usar esta función
+      
+    a.btn.btn-block.btn-primary.font-weight-bolder href="/users/sign_in"  Iniciar sesión

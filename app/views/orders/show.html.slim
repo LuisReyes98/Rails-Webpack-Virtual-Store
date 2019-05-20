@@ -1,23 +1,11 @@
 p#notice = notice
 
 p
-  strong Cuantity:
-  = @order.cuantity
-p
   strong Cost:
   = @order.cost
 p
-  strong Payed:
-  = @order.payed
-p
-  strong Expiration date:
-  = @order.expiration_date
-p
-  strong Payment date:
-  = @order.payment_date
-p
-  strong User:
-  = @order.user
+  strong Items number:
+  = @order.items_number
 
 => link_to 'Edit', edit_order_path(@order)
 '|

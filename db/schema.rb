@@ -51,12 +51,10 @@ ActiveRecord::Schema.define(version: 2019_05_02_205539) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "cuantity"
     t.float "cost"
-    t.boolean "payed"
-    t.float "expiration_date"
-    t.float "payment_date"
+    t.integer "items_number"
     t.bigint "user_id"
+    t.datetime "due_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_orders_on_user_id"
@@ -92,13 +90,18 @@ ActiveRecord::Schema.define(version: 2019_05_02_205539) do
     t.bigint "user_id"
     t.bigint "product_id"
     t.integer "amount"
+    t.bigint "order_id"
+    t.boolean "in_order", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_users_carts_conectors_on_order_id"
     t.index ["product_id"], name: "index_users_carts_conectors_on_product_id"
     t.index ["user_id"], name: "index_users_carts_conectors_on_user_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "orders", "users"
+  add_foreign_key "users_carts_conectors", "orders"
   add_foreign_key "users_carts_conectors", "products"
   add_foreign_key "users_carts_conectors", "users"
 end

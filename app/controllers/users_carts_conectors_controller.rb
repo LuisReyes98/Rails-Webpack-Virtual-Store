@@ -70,6 +70,6 @@ class UsersCartsConectorsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def users_carts_conector_params
       # params.require(:users_carts_conector).permit(:user_id, :product_id)
-      params.permit(:user_id, :product_id, :amount)
+      params.permit(:user_id, :product_id, :amount,:order_id,:in_order)
     end
 end

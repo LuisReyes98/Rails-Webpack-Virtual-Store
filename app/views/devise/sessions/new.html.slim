@@ -29,6 +29,6 @@ signin inline-template="" v-bind:validEmail="true" v-bind:typed_email="false"
             = f.check_box :remember_me, :class=>"custom-control-input"
             = f.label :remember_me ,"Recuerdame" ,:class=>"custom-control-label"
         .d-flex.justify-content-center.align-content-end
-          = f.submit "Iniciar Sesion" , :class=>"btn btn-lg btn-info m-1"
+          = f.submit "Iniciar Sesion" , :class=>"btn btn-lg btn-info m-1", :id => "submit_login_user"
         .d-flex
           = render "devise/shared/links"      

@@ -56,6 +56,7 @@ UsersCartsConector.create([
     user_id: 1,
     product_id:1,
     amount: 1,
+    in_order: false,
   },
   {
     user_id: 1,
@@ -73,6 +74,5 @@ UsersCartsConector.create([
     user_id: 2,
     product_id:4,
     amount: 2,
-
   },
 ])

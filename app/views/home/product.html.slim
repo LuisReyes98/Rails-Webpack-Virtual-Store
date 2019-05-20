@@ -1,0 +1,8 @@
+home_product_show  inline-template="" :product="#{@product.to_json}"
+  .bg-info.col-sm-4.col-md-3.p-1.m-2
+    img.card-img-top.product-image :alt="product.name" :src="product.image_src"
+    .card-body
+      h2.card-title.title 
+        | {{product.name}}
+      div v-html="product.add_to_cart_link"          
+    =< link_to 'Back', request.referrer , :class => "btn btn-danger"

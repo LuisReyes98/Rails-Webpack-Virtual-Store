@@ -1,7 +1,6 @@
 class Order < ApplicationRecord
-    belongs_to :user
-    has_many :associations
-    has_many :products, through: :associations
+  has_many :users_carts_conectors
+  belongs_to :user
 
-    
+  
 end
