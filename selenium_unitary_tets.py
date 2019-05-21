@@ -26,7 +26,7 @@ login_data = [
 ]
 
 driver = webdriver.Chrome('./chromedriver_linux64/chromedriver')
-driver.maximize_window()
+# driver.maximize_window()
 
 def run_registration_test(user_email,password,password_confirmation):
   global driver
@@ -73,6 +73,8 @@ def close_session():
   try:
     close_session_button = driver.find_element_by_id('close_session_link')
     close_session_button.click()
+    print("cerrando sesion")
+
     time.sleep(5)
   except:
     pass
@@ -120,16 +122,27 @@ def login(user_email, password):
 def do_fail_app_showcase():
   global driver
   global normal_user
+  input("Presione cualquier tecla para iniciar las pruebas de recorrido fallido de la app")
+
+
   driver.get('http://localhost:3000/')
   time.sleep(5)
+  print("iniciando sesion")
   login(normal_user[0], normal_user[1]) #login in
   time.sleep(5)
+  print("añadiendo elementos al carrito")
+
   driver.find_element_by_class_name("add_to_cart").click() #adding to cart
   time.sleep(5)
   #in cart view 
+  print("vaciando carrito")
+
   empty_cart() #empty the cart
   #attempt to register 
   driver.find_element_by_id("register_cart_order").click()
+  print("Fallo en registrar orden")
+  close_session()
+
 
 def empty_cart():
   global driver
@@ -143,40 +156,62 @@ def empty_cart():
 def do_successful_app_showcase():  
   global driver
   global admin_user
+  input("Presione cualquier tecla para iniciar las pruebas de recorrido exitoso de la app")
+
   driver.get('http://localhost:3000/')
   time.sleep(5)
+  print("inicio de sesion con admin")
+
   login(admin_user[0], admin_user[1])  # login in
-  
+  print("añdiendo elementos al carrito")
   time.sleep(5)
   driver.find_element_by_class_name("add_to_cart").click()  # adding to cart
   time.sleep(5)
   #register to cart
+  print("registrando orden")
   driver.find_element_by_id("register_cart_order").click()
   time.sleep(5)
 
   #go to admin section
+  print("entrando a la seccion de admin")
   driver.find_element_by_id("admin_nav_link").click()
   time.sleep(5)
 
   #Travel in the admin sections
+  print("navegando en la seccion de admin")
+
   driver.find_element_by_id("products_section").click()
+  print("visualiza seccion producto")
+
   time.sleep(5)
   driver.find_element_by_id("orders_section").click()
+  print("visualiza seccion ordenes")
+
   time.sleep(5)
   driver.find_element_by_id("users_section").click()
+  print("visualiza seccion usuarios")
+
   time.sleep(5)
   driver.find_element_by_id("reports_section").click()
+  print("visualiza seccion reportes")
+
   time.sleep(5)
 
   # go to procut
   driver.find_element_by_id("products_section").click()
+  print("visualiza seccion producto")
+
   time.sleep(5)
   # go to create
   driver.find_element_by_id("create_product").click()
+  print("visualiza seccion crear producto")
+
   time.sleep(5)
 
   # attemp to submit
   driver.find_element_by_id("submit_button").click()
+  print("falla crear producto vacio")
+
   time.sleep(5)
   
   close_session()
@@ -184,11 +219,13 @@ def do_successful_app_showcase():
 
 
 def main():
-  pass
+  do_registration_tests()
+  
+  do_login_tests()
+  
+  do_fail_app_showcase()
+
   do_successful_app_showcase()
-  # do_fail_app_showcase()
-  # do_login_tests()
-  # do_registration_tests()
 
 if __name__ == '__main__':
   main()
