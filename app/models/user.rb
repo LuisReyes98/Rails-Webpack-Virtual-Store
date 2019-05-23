@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :orders  
 
+
   def self.getAccessLevels
     return [
     'normal',
