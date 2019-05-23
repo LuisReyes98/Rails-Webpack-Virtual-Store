@@ -43,13 +43,13 @@ RSpec.configure do |config|
     `bin/webpack-dev-server`
     # Webpacker::Manifest.load
   end
-
+  
   # Database cleaner
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
   end
-
+  
   config.around(:each) do |example|
     DatabaseCleaner.cleaning do
       example.run
@@ -57,12 +57,14 @@ RSpec.configure do |config|
   end
   # factory bot
   config.include FactoryBot::Syntax::Methods
-
+  
   # Devise
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include Devise::Test::ControllerHelpers, type: :view
   config.include Devise::Test::IntegrationHelpers, type: :feature
-
+  
+  # devise spec helper
+  config.include DeviseRequestSpecHelpers, type: :request
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   
