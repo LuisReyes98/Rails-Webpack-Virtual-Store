@@ -4,7 +4,7 @@ class DashboardController < ApplicationController
   def orders
     @current_site = 'dashboard'
 
-    orders = Order.all
+    orders = Order.all()
     @orders = []
     for order in orders do
       user = User.find(order.user_id)
@@ -40,29 +40,29 @@ class DashboardController < ApplicationController
         delete_link: (helpers.link_to "Borrar", admin_destroy_user_path(user), method: :delete, data: { confirm: "Seguro de borrar #{user.email} ?" }),
       })
     end
-
-    # for i in 0..4 do
-    #   @users.append({
-    #     username: 'Jose',
-    #     access_level: 'admin',
-    #   })
-      
-    # end
     
   end
   
   def reports
+
     @current_site = 'dashboard'
+    from = params["date_from"]
     
+    if from != "" and from
+      date_from = Date.parse(from)
+      @orders = Order.where("created_at >= ?", date_from)
+    else
+      @orders = Order.all()
+
+    end
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @orders.to_csv }
+    end
+
   end
   
-  
-  
-  
-  # private
-  #   def set_current_user
-  #     @this_user = current_user
-  #   end
     
 
 end

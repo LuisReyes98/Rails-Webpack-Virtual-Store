@@ -24,10 +24,9 @@ Rails.application.routes.draw do
   get 'display_product/:id', to: 'home#product'
 
   get 'dashboard/orders/', to: 'dashboard#orders'
-  # get 'dashboard/create_product/', to: 'dashboard#create_product'
-  get 'dashboard/reports/', to: 'dashboard#reports'
   get 'dashboard/users/', to: 'dashboard#users'
   
+  get 'dashboard/reports/', to: 'dashboard#reports'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

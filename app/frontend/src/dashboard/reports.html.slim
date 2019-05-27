@@ -1,12 +1,12 @@
 .container-fluid
   .row
     dshsidebar :current_section="current_section"    
-    .col-sm-8
+    .col-sm-8      
       .container-fluid
         .container
-          form action="" 
+          form action="/dashboard/reports/" 
             h1.h1.text-center Reportes
             .row.form-group
               label.h2 for="date"  Reporte desde:
-              input#date.form-control name="date" type="date"
-            button.btn.btn-primary Generar Reporte
+              input#date.form-control v-model="date_from" name="date_from" type="date"
+            a.btn.btn-primary :href="'/dashboard/reports.csv?date_from=' + date_from" Generar Reporte
