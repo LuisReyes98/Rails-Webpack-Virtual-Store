@@ -1,12 +1,12 @@
-#home
+#home  v-model="d_products"
   .alert.alert-success role="alert" v-if="false"
     | Sesión iniciada exitosamente
   .home_container    
-    
-    home_sidebar :groups="groups"
+    home_sidebar :groups="groups" :products="products" @update_products="updateDisplayedProducts"
 
-    .col-8.container-fluid.align-items-center.item_container      
-      template v-for="product in products"
+    .col-8.container-fluid.align-items-center.item_container     
+      
+      template v-for="product in d_products"
         .card.bg-info.col-sm-4.col-md-3.p-1.m-2
           img.card-img-top.product-image :alt="product.name" :src="product.image_src"
           .card-body

@@ -38,11 +38,11 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
   # Webpack
-  config.before(:suite) do
-    # compile front-end and load manifest
-    `bin/webpack-dev-server`
-    # Webpacker::Manifest.load
-  end
+  # config.before(:suite) do
+  #   # compile front-end and load manifest
+  #   `bin/webpack-dev-server`
+  #   # Webpacker::Manifest.load
+  # end
   
   # Database cleaner
   config.before(:suite) do

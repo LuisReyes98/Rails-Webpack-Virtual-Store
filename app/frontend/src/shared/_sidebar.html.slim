@@ -1,9 +1,13 @@
 .col-4.home_sidebar
+  ul.list-group
+        li.list-group-item.title v-on:click="showAll"
+          h3.group 
+            |  Mostrar Todos
   template v-for="group in groups"
     ul.list-group
-      li.list-group-item.title
+      li.list-group-item.title v-on:click="filter_group(group.name)"
         h3.group 
           |  {{group.name}}          
       template v-for="category in group.categories"
-        li.list-group-item.list-element   
+        li.list-group-item.list-element v-on:click="filter_category(category.name)"
           |  {{category.name}}

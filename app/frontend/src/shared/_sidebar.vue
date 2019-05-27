@@ -3,12 +3,42 @@ import template from './_sidebar.html.slim';
 
 export default {
   mixins: [template],
-  props: ["groups"],
+  props: ["groups","products"],
+
+  methods: {
+    filter_group: function(group) {
+      let productsDiplayed = [];
+      this.products.forEach(product => {
+        if (product.group === group) {
+          productsDiplayed.push(product)          
+        }        
+      });          
+      this.$emit("update_products",productsDiplayed);           
+    },
+
+    filter_category: function(category) {
+      let productsDiplayed = [];
+      this.products.forEach(product => {
+        if (product.category === category) {
+          productsDiplayed.push(product)          
+        }        
+      });          
+      this.$emit("update_products",productsDiplayed);  
+    },
+    showAll: function () { 
+      this.$emit("update_products",this.products);  
+    }
+  },
 }
 </script>
 
 
 <style lang="scss" scoped>
+  .home_sidebar{
+    max-height: 90%;
+    overflow-y: scroll;
+
+  }
   .group{
     text-transform: uppercase;
     font-weight: bolder;

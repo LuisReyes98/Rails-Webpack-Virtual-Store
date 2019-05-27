@@ -4,6 +4,20 @@ import template from './home.html.slim';
 export default {
   mixins: [template],
   props: ["products","groups"],
+  data: function () {
+    return {
+      d_products: this.products,
+      
+    }
+  },
+  // beforeMount() {
+  //   this.d_products = [...this.products];
+  // },
+  methods: {
+    updateDisplayedProducts: function(products_to_show){
+      this.d_products = products_to_show;
+    },
+  },
   
 }
 </script>
